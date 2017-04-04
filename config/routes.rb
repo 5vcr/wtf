@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   get 'users/dashboard', as: :dashboard # dashboard_path
   post 'users/create'
 
-  post 'feedbacks/create'
-  get 'feedbacks/new'
+  post 'feedbacks/create' => 'feedbacks#create'
+  get 'feedbacks/new' => 'feedbacks#new'
 
-  post 'queries/create'
-  get 'queries/:id', as: :query
+  post 'queries/create' => 'queries#create'
+  get 'queries/show', as: :query # :id of the graph
 
   get 'queries/new/country', to: 'queries#new_country'
   get 'queries/new/category', to: 'queries#new_category'
