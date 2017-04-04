@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170403212455) do
     t.string   "geo"
     t.string   "cofog99"
     t.string   "time"
-    t.string   "value"
+    t.float    "value"
     t.string   "unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
