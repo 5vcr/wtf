@@ -1,0 +1,62 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag 'what-the-finance.jpeg' %>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <!-- Different navigation if login or not -->
+    <% if account_signed_in? %>
+
+      <!-- Profile picture and dropdown -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <%= image_tag current_account.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-user-o"></i>  <%= t(".profile", default: "Your Profile") %>
+              <% end %>
+            </li>
+
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-pencil-square-o"></i>  <%= t(".profile", default: "Edit Profile") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    <% else %>
+
+      <!-- Login text link -->
+      <%= link_to t(".sign_in", default: "Sign in"), new_account_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <% end %>
+
+    <!-- Button (call-to-action) -->
+    <%= link_to t(".top_call_to_action", default: "Random Graph"), root_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+  </div>
+
+  <% if current_account %>
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><%= link_to "Profile", root_path%></li>
+        <li><%= link_to "Log Out", destroy_account_session_path %></li>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</div>
