@@ -10,7 +10,7 @@
     <!-- Different navigation if login or not -->
     <% if account_signed_in? %>
 
-      <!-- Profile picture and dropdown -->
+     <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag current_account.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -27,7 +27,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to root_path do %>
+              <%= link_to destroy_account_session_path , method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
@@ -38,7 +38,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Sign in"), new_account_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Sign in"), account_facebook_omniauth_authorize_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
 
