@@ -10,7 +10,7 @@ gem 'redis'
 
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook'
 
 gem 'sass-rails'
 gem 'jquery-rails'

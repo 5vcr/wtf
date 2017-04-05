@@ -8,11 +8,3 @@ public/assets
 
 # Ignore application configuration
 /config/application.yml
-
-development:
-  FB_ID: "3************1"
-  FB_SECRET: "4************e"
-
-production:
-  FB_ID: "3************2"
-  FB_SECRET: "5************f"

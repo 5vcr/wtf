@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :accounts,
+    controllers: { omniauth_callbacks: 'accounts/omniauth_callbacks' }
+
   get 'users/dashboard', as: :dashboard # dashboard_path
   post 'users/create'
 
