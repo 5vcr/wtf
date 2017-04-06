@@ -1,4 +1,4 @@
-TIME,GEO,COFOG99,COFOG99_LABEL,Value,UNIT,Flag and Footnotes
+YEAR,COUNTRY,CATEGORY_CODE,CATEGORY,VALUE,UNIT,FOOTNOTES
 2014,Belgium,GF01,General public services,8.4,Percentage of gross domestic product (GDP),
 2014,Bulgaria,GF01,General public services,2.8,Percentage of gross domestic product (GDP),
 2014,Czech Republic,GF01,General public services,4.7,Percentage of gross domestic product (GDP),

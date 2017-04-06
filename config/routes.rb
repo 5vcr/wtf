@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'users/dashboard', as: :dashboard # dashboard_path
   post 'users/create'
 
+  get 'queries/build_graph', to: 'queries#build_graph'
+
   post 'feedbacks/create' => 'feedbacks#create'
   get 'feedbacks/new' => 'feedbacks#new'
 

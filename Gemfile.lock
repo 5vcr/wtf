@@ -48,6 +48,8 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-material-design (0.2.2)
+      bootstrap-sass (~> 3.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -204,6 +206,7 @@ DEPENDENCIES
   autoprefixer-rails
   better_errors
   binding_of_caller
+  bootstrap-material-design
   bootstrap-sass
   devise
   figaro
