@@ -1,92 +1,205 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.hexes {
+  margin: 0 auto;
+}
 
-// .hexagon {
-//     overflow: hidden;
-//     visibility: hidden;
-//     transform: rotate(120deg);
-//     }
-// .hexagon-in1 {
-//     overflow: hidden;
-//     width: 100%;
-//     height: 100%;
-//     transform: rotate(-60deg);
-//     }
-// .hexagon-in2 {
-//     width: 100%;
-//     height: 100%;
-//     background-repeat: no-repeat;
-//     background-position: 50%;
-//     // background-image: url(http://placekitten.com/240/240);
-//     visibility: visible;
-//     transform: rotate(-60deg);
-//     }
+#hex-container {
+  position: relative;
+  height: 550px;
+}
 
-// .hexagon1 {
-//     width: 200px;
-//     height: 400px;
-//     margin: -80px 0 0 20px;
-//     }
+#hex4 {
+  position: absolute;
+    top: 50px;
+    opacity: 0;
+}
+
+#hex3 {
+  position: absolute;
+    top: 50px;
+    right: 100px;
+    opacity: 0;
+}
+
+#hex5 {
+  position: absolute;
+    top: 50px;
+    left: 85px;
+    opacity: 0;
+}
+
+#hex6 {
+  position: absolute;
+  top: 188px;
+  left: 170px;
+  opacity: 0;
+}
+
+#hex7 {
+   position: absolute;
+    top: 188px;
+    right: 185px;
+    opacity: 0;
+}
+
+#hex8 {
+  position: absolute;
+  top: 450px;
+  right: 85px;
+  opacity: 0;
+}
+
+#hex9 {
+  position: absolute;
+  top: 470px;
+  opacity: 0;
+}
+
+#hex10 {
+  position: absolute;
+top: 470px;
+left: 85px;
+opacity: 0;
+}
 
 .hexagon {
-  position: relative;
-  width: 300px; 
-  height: 173.21px;
-  margin: 86.60px 0;
-  background-image: url('screenshot1.png');
-  background-size: auto 346.4102px;
-  background-position: center;
-}
-
-.hexTop,
-.hexBottom {
-  position: absolute;
-  z-index: 1;
-  width: 212.13px;
-  height: 212.13px;
   overflow: hidden;
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 43.93px;
+  visibility: hidden;
+  transform: rotate(120deg);
+}
+.hexagon-in1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+  }
+.hexagon-in2 {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  visibility: visible;
+  transform: rotate(-60deg);
+  background-size: contain !important;
+  }
+
+.hexagon1 {
+  width: 350px;
+  height: 250px;
+  margin: 0;
 }
 
-/*counter transform the bg image on the caps*/
-.hexTop:after,
-.hexBottom:after {
-  content: "";
+.hexagon:hover {
+  opacity: 0.8;
+}
+
+@media(max-width: 1200px) {
+ #hex2 {
   position: absolute;
-  width: 300.0000px;
-  height: 173.20508075688775px;
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
-  transform-origin: 0 0;
-  background: inherit;
+    top: 114px;
+    right: 50px;
+    opacity: 0;
 }
 
-.hexTop {
-  top: -106.0660px;
-}
-
-.hexTop:after {
-  background-position: center top;
-}
-
-.hexBottom {
-  bottom: -106.0660px;
-}
-
-.hexBottom:after {
-  background-position: center bottom;
-}
-
-.hexagon:after {
-  content: "";
+#hex4 {
   position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 300.0000px;
-  height: 173.2051px;
-  z-index: 2;
-  background: inherit;
+    top: 250px;
+    opacity: 0;
 }
+
+#hex1 {
+    position: absolute;
+    top: 114px;
+    left: 100px;
+    opacity: 0;
+}
+
+#hex6 {
+  position: absolute;
+  top: 390px;
+    left: 100px;
+    opacity: 0;
+}
+
+#hex7 {
+   position: absolute;
+    top: 388px;
+    right: 50px;
+    opacity: 0;
+}
+
+#hex9 {
+  position: absolute;
+  top: 520px;
+  opacity: 0;
+}
+}
+@media(max-width: 990px) {
+ #hex2 {
+  position: absolute;
+    top: 114px;
+    right: -100px;
+    opacity: 0;
+}
+
+#hex4 {
+  position: absolute;
+    top: 250px;
+    opacity: 0;
+}
+
+#hex1 {
+    position: absolute;
+    top: 114px;
+    left: 30px;
+    opacity: 0;
+}
+
+#hex6 {
+  position: absolute;
+  top: 390px;
+    left: 30px;
+    opacity: 0;
+}
+
+#hex7 {
+   position: absolute;
+    top: 388px;
+    right: -100px;
+    opacity: 0;
+}
+}
+@media(max-width: 767px) {
+  .hexagon1 {
+    width: 450px;
+  height: 300px;
+  }
+
+#hex4 {
+  position: absolute;
+    top: 250px;
+    opacity: 0;
+    margin-left: 20%;
+}
+
+}
+
+#hex8 {
+  margin: 20px
+}
+
+h2, h3 {
+  font-weight: 100;
+  color: #9e9e9e;
+}
+
+#site-title {
+  font-size: 70px;
+  font-family: 'Poiret One', cursive;
+  color: #cc3300;
+  font-weight: 600;
+}
+
+p {
+  color: #616161;
+}
+
