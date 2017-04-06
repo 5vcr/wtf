@@ -13,7 +13,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'bootstrap-material-design'
-
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
