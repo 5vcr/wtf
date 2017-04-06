@@ -1,9 +1,63 @@
-<h1>By Comparison</h1>
-hello there this is where you begin your query for a country vs country comparison
-of multiple categories.
+<!-- routes to bubble matrix, user chooses one or two countries, and one or two categories
+to compare -->
 
-<p><%= link_to 'See your graph', query_path %></p>
+<h1>Make Your Selections</h1>
+
+Choose one or more categories to compare:
+
+<p><%= link_to 'All categories', category_path(0, category1: "") %></p>
+<p><%= link_to 'General public services', category_path(0, category1: "General public services") %></p>
+<p><%= link_to 'Defense', category_path(0, category1: "Defense") %></p>
+<p><%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety") %></p>
+<p><%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs") %></p>
+<p><%= link_to 'Environment protection', category_path(0, category1: "Environment protection") %></p>
+<p><%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities") %></p>
+<p><%= link_to 'Health', category_path(0, category1: "Health") %></p>
+<p><%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion") %></p>
+<p><%= link_to 'Education', category_path(0, category1: "Education") %></p>
+<p><%= link_to 'Social protection', category_path(0, category1: "Social protection") %></p>
+
+
+<p>--------------------------</p>
+
+Choose one or two countries to compare:
+
+<p><%= link_to 'All Countries', country_path(0) %></p>
+<p><%= link_to 'Austria', country_path(0, country1: "Austria") %></p>
+<p><%= link_to 'Belgium', country_path(0, country1: "Belgium") %></p>
+<p><%= link_to 'Bulgaria', country_path(0, country1: "Belgium") %></p>
+<p><%= link_to 'Croatia', country_path(0) %></p>
+<p><%= link_to 'Cyprus', country_path(0) %></p>
+<p><%= link_to 'Czech Republic', country_path(0, country1: "Czech Republic") %></p>
+<p><%= link_to 'Denmark', country_path(0) %></p>
+<p><%= link_to 'Germany', country_path(0) %></p>
+<p><%= link_to 'Estonia', country_path(0) %></p>
+<p><%= link_to 'Finland', country_path(0) %></p>
+<p><%= link_to 'France', country_path(0) %></p>
+<p><%= link_to 'Greece', country_path(0) %></p>
+<p><%= link_to 'United Kingdom', country_path(0) %></p>
+<p><%= link_to 'Hungary', country_path(0) %></p>
+<p><%= link_to 'Ireland', country_path(0) %></p>
+<p><%= link_to 'Italy', country_path(0) %></p>
+<p><%= link_to 'Latvia', country_path(0) %></p>
+<p><%= link_to 'Lithuania', country_path(0) %></p>
+<p><%= link_to 'Luxembourg', country_path(0) %></p>
+<p><%= link_to 'Malta', country_path(0) %></p>
+<p><%= link_to 'Netherlands', country_path(0) %></p>
+<p><%= link_to 'Poland', country_path(0) %></p>
+<p><%= link_to 'Portugal', country_path(0) %></p>
+<p><%= link_to 'Romania', country_path(0) %></p>
+<p><%= link_to 'Slovenia', country_path(0) %></p>
+<p><%= link_to 'Slovakia', country_path(0) %></p>
+<p><%= link_to 'Spain', country_path(0) %></p>
+<p><%= link_to 'Sweden', country_path(0) %></p>
+
+
+
+
+<p>--------------------------</p>
+
+
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>
-
