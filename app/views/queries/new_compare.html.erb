@@ -5,58 +5,52 @@ to compare -->
 
 Choose one or more categories to compare:
 
-<p><%= link_to 'All categories', query_path(:country1 => @country1) %></p>
-<p><%= link_to 'General Public Services', query_path %></p>
-<p><%= link_to 'Defence', query_path %></p>
-<p><%= link_to 'Public Order and Safety', query_path %></p>
-<p><%= link_to 'Economic Affairs', query_path %></p>
-<p><%= link_to 'Environment Protection', query_path %></p>
-<p><%= link_to 'Housing and Community Amenities', query_path %></p>
-<p><%= link_to 'Health', query_path %></p>
-<p><%= link_to 'Recreation, Culture and Religion', query_path %></p>
-<p><%= link_to 'Education', query_path %></p>
-<p><%= link_to 'Social protection', query_path %></p>
+<p><%= link_to 'All categories', category_path(0, category1: "") %></p>
+<p><%= link_to 'General public services', category_path(0, category1: "General public services") %></p>
+<p><%= link_to 'Defense', category_path(0, category1: "Defense") %></p>
+<p><%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety") %></p>
+<p><%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs") %></p>
+<p><%= link_to 'Environment protection', category_path(0, category1: "Environment protection") %></p>
+<p><%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities") %></p>
+<p><%= link_to 'Health', category_path(0, category1: "Health") %></p>
+<p><%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion") %></p>
+<p><%= link_to 'Education', category_path(0, category1: "Education") %></p>
+<p><%= link_to 'Social protection', category_path(0, category1: "Social protection") %></p>
 
-
-<p><%= link_to 'You have chosen a category, now choose a country', query_path %></p>
-<p><%= link_to 'See your graph', query_path %></p>
-<p><%= link_to 'Go to your profile', dashboard_path %></p>
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Home', root_path %></p>
 
 <p>--------------------------</p>
 
 Choose one or two countries to compare:
 
-<p><%= link_to 'All Countries', query_path %></p>
-<p><%= link_to 'Austria', query_path %></p>
-<p><%= link_to 'Belgium', query_path %></p>
-<p><%= link_to 'Bulgaria', query_path %></p>
-<p><%= link_to 'Croatia', query_path %></p>
-<p><%= link_to 'Cyprus', query_path %></p>
-<p><%= link_to 'Czech Republic', query_path %></p>
-<p><%= link_to 'Denmark', query_path %></p>
-<p><%= link_to 'Germany', query_path %></p>
-<p><%= link_to 'Estonia', query_path %></p>
-<p><%= link_to 'Finland', query_path %></p>
-<p><%= link_to 'France', query_path %></p>
-<p><%= link_to 'Greece', query_path %></p>
-<p><%= link_to 'United Kingdom', query_path %></p>
-<p><%= link_to 'Hungary', query_path %></p>
-<p><%= link_to 'Ireland', query_path %></p>
-<p><%= link_to 'Italy', query_path %></p>
-<p><%= link_to 'Latvia', query_path %></p>
-<p><%= link_to 'Lithuania', query_path %></p>
-<p><%= link_to 'Luxembourg', query_path %></p>
-<p><%= link_to 'Malta', query_path %></p>
-<p><%= link_to 'Netherlands', query_path %></p>
-<p><%= link_to 'Poland', query_path %></p>
-<p><%= link_to 'Portugal', query_path %></p>
-<p><%= link_to 'Romania', query_path %></p>
-<p><%= link_to 'Slovenia', query_path %></p>
-<p><%= link_to 'Slovakia', query_path %></p>
-<p><%= link_to 'Spain', query_path %></p>
-<p><%= link_to 'Sweden', query_path %></p>
+<p><%= link_to 'All Countries', country_path(0) %></p>
+<p><%= link_to 'Austria', country_path(0, country1: "Austria") %></p>
+<p><%= link_to 'Belgium', country_path(0, country1: "Belgium") %></p>
+<p><%= link_to 'Bulgaria', country_path(0, country1: "Belgium") %></p>
+<p><%= link_to 'Croatia', country_path(0) %></p>
+<p><%= link_to 'Cyprus', country_path(0) %></p>
+<p><%= link_to 'Czech Republic', country_path(0, country1: "Czech Republic") %></p>
+<p><%= link_to 'Denmark', country_path(0) %></p>
+<p><%= link_to 'Germany', country_path(0) %></p>
+<p><%= link_to 'Estonia', country_path(0) %></p>
+<p><%= link_to 'Finland', country_path(0) %></p>
+<p><%= link_to 'France', country_path(0) %></p>
+<p><%= link_to 'Greece', country_path(0) %></p>
+<p><%= link_to 'United Kingdom', country_path(0) %></p>
+<p><%= link_to 'Hungary', country_path(0) %></p>
+<p><%= link_to 'Ireland', country_path(0) %></p>
+<p><%= link_to 'Italy', country_path(0) %></p>
+<p><%= link_to 'Latvia', country_path(0) %></p>
+<p><%= link_to 'Lithuania', country_path(0) %></p>
+<p><%= link_to 'Luxembourg', country_path(0) %></p>
+<p><%= link_to 'Malta', country_path(0) %></p>
+<p><%= link_to 'Netherlands', country_path(0) %></p>
+<p><%= link_to 'Poland', country_path(0) %></p>
+<p><%= link_to 'Portugal', country_path(0) %></p>
+<p><%= link_to 'Romania', country_path(0) %></p>
+<p><%= link_to 'Slovenia', country_path(0) %></p>
+<p><%= link_to 'Slovakia', country_path(0) %></p>
+<p><%= link_to 'Spain', country_path(0) %></p>
+<p><%= link_to 'Sweden', country_path(0) %></p>
 
 
 

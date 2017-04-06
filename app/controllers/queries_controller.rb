@@ -1,31 +1,73 @@
 class QueriesController < ApplicationController
   def create
-    query = Query.new
-    redirect_to query_path(query)
+    sorted_countries = query_params[:countries].sort.uniq.join(",")
+    sorted_categories = query_params[:categories].sort.uniq.join(",")
+
+    previous = Query.where(countries: sorted_countries, categories: sorted_categories)
+
+    if previous
+      query = previous
+    else
+      query = Query.create(countries: sorted_countries, categories: sorted_categories)
+    end
+
+    if query_params[:countries].sort.uniq.any?
+      redirect_to eurostats_country_show_path(query)
+    end
+
+    if query_params[:categories].sort.uniq.any?
+      redirect_to eurostats_category_show_path(query)
+    end
+
+    if query_params[:categories].sort.uniq.any? and query_params[:countries].sort.uniq.any?
+      redirect_to eurostats_compare_show_path(query)
+    end
   end
 
-  def show
-    # this displays the actual graph
+  def eurostats_show_country
+    # query = Query.find(params[:id])
+    # first_country = query.countries.split(",").first
+    # @country1 = first_country
+
+    @country1 = params[:country1]
+    @data = Statistic.where(country: @country1)
+    render "eurostats_show_country"
+  end
+
+  def eurostats_show_category
+    # query = Query.find(params[:id])
+    # first_categories = query.categories.split(",").first
+    # @category1 = first_categories
+
+    @category1 = params[:category1]
+    @data = Statistic.where("category ILIKE ?", "%#{@category1}%")
+    render "eurostats_show_category"
+  end
+
+  def eurostats_show_compare
+    @countries = params[:countries]
+    @categories = params[:categories]
+
+    @data = Statistic.where(country: @countries, categories: @categories)
+
+    render "eurostats_show_compare"
   end
 
   def new_country
-    # build url
+    @query = Query.new
   end
 
   def new_category
-    #build url
+    @query = Query.new
   end
 
   def new_compare
-    #build url
+    @query = Query.new
   end
 
-  def build_graph
-    # after URL has been built
-    # http://localhost:3000/queries/build_graph?country1=NL&country2=DE&category1=Defense
-    @country1 = params[:country1]
-    @country2 = params[:country2]
-    @category1 = params[:category1]
-    @category2 = params[:category2]
+  private
+
+  def query_params
+    params.require(:query).permit()
   end
 end

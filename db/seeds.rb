@@ -19,11 +19,13 @@ csv = CSV.parse(csv_text, :headers => true)
 Statistic.delete_all
 
 csv.each do |row|
-  Statistic.create({
+  statistic = Statistic.create({
     country: row.to_hash['COUNTRY'],
     category: row.to_hash['CATEGORY'],
     year: row.to_hash['YEAR'],
     value: row.to_hash['VALUE'].to_f,
     unit: row.to_hash['UNIT'],
   })
+
+  puts statistic.category
 end
