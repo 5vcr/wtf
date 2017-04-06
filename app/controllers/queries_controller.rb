@@ -8,8 +8,16 @@ class QueriesController < ApplicationController
     # this displays the actual graph
   end
 
-  def new_selection
+  def new_country
     # build url
+  end
+
+  def new_category
+    #build url
+  end
+
+  def new_compare
+    #build url
   end
 
   def build_graph

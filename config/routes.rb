@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   post 'queries/create' => 'queries#create'
   get 'queries/show', as: :query # :id of the graph
 
-  get 'queries/new/selection', to: 'queries#new_selection'
+  get 'queries/new/country', to: 'queries#new_country'
+  get 'queries/new/category', to: 'queries#new_category'
+  get 'queries/new/compare', to: 'queries#new_compare'
+
 
   root to: 'pages#home'
 end
