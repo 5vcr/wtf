@@ -1,8 +1,11 @@
+Single category routes to Sven's graph type, all countries for selected category
+
 <h1>Make Your Selections</h1>
 
 Choose a single country or category to explore, or choose up to two of each to compare
 
-<p><%= link_to 'All categories', query_path %></p>
+
+<p><%= link_to 'All categories', query_path(:country1 => @country1) %></p>
 <p><%= link_to 'General Public Services', query_path %></p>
 <p><%= link_to 'Defence', query_path %></p>
 <p><%= link_to 'Public Order and Safety', query_path %></p>
@@ -17,44 +20,6 @@ Choose a single country or category to explore, or choose up to two of each to c
 
 <p><%= link_to 'You have chosen a category, now choose a country', query_path %></p>
 <p><%= link_to 'See your graph', query_path %></p>
-<p><%= link_to 'Go to your profile', dashboard_path %></p>
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Home', root_path %></p>
-
-<p>--------------------------</p>
-
-Belgium
-Bulgaria
-Croatia
-Cyprus
-Denmark
-Germany
-Estonia
-Finland
-France
-Greece
-United Kingdom
-Hungary
-Ireland
-Italy
-Latvia
-Lithuania
-Luxembourg
-Malta
-The Netherlands
-Austria
-Poland
-Portugal
-Romania
-Slovenia
-Slovakia
-Spain
-Czech Republic
-Sweden
-
-<p>--------------------------</p>
-
-
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>

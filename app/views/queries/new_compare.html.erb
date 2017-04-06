@@ -1,0 +1,69 @@
+<!-- routes to bubble matrix, user chooses one or two countries, and one or two categories
+to compare -->
+
+<h1>Make Your Selections</h1>
+
+Choose one or more categories to compare:
+
+<p><%= link_to 'All categories', query_path(:country1 => @country1) %></p>
+<p><%= link_to 'General Public Services', query_path %></p>
+<p><%= link_to 'Defence', query_path %></p>
+<p><%= link_to 'Public Order and Safety', query_path %></p>
+<p><%= link_to 'Economic Affairs', query_path %></p>
+<p><%= link_to 'Environment Protection', query_path %></p>
+<p><%= link_to 'Housing and Community Amenities', query_path %></p>
+<p><%= link_to 'Health', query_path %></p>
+<p><%= link_to 'Recreation, Culture and Religion', query_path %></p>
+<p><%= link_to 'Education', query_path %></p>
+<p><%= link_to 'Social protection', query_path %></p>
+
+
+<p><%= link_to 'You have chosen a category, now choose a country', query_path %></p>
+<p><%= link_to 'See your graph', query_path %></p>
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Home', root_path %></p>
+
+<p>--------------------------</p>
+
+Choose one or two countries to compare:
+
+<p><%= link_to 'All Countries', query_path %></p>
+<p><%= link_to 'Austria', query_path %></p>
+<p><%= link_to 'Belgium', query_path %></p>
+<p><%= link_to 'Bulgaria', query_path %></p>
+<p><%= link_to 'Croatia', query_path %></p>
+<p><%= link_to 'Cyprus', query_path %></p>
+<p><%= link_to 'Czech Republic', query_path %></p>
+<p><%= link_to 'Denmark', query_path %></p>
+<p><%= link_to 'Germany', query_path %></p>
+<p><%= link_to 'Estonia', query_path %></p>
+<p><%= link_to 'Finland', query_path %></p>
+<p><%= link_to 'France', query_path %></p>
+<p><%= link_to 'Greece', query_path %></p>
+<p><%= link_to 'United Kingdom', query_path %></p>
+<p><%= link_to 'Hungary', query_path %></p>
+<p><%= link_to 'Ireland', query_path %></p>
+<p><%= link_to 'Italy', query_path %></p>
+<p><%= link_to 'Latvia', query_path %></p>
+<p><%= link_to 'Lithuania', query_path %></p>
+<p><%= link_to 'Luxembourg', query_path %></p>
+<p><%= link_to 'Malta', query_path %></p>
+<p><%= link_to 'Netherlands', query_path %></p>
+<p><%= link_to 'Poland', query_path %></p>
+<p><%= link_to 'Portugal', query_path %></p>
+<p><%= link_to 'Romania', query_path %></p>
+<p><%= link_to 'Slovenia', query_path %></p>
+<p><%= link_to 'Slovakia', query_path %></p>
+<p><%= link_to 'Spain', query_path %></p>
+<p><%= link_to 'Sweden', query_path %></p>
+
+
+
+
+<p>--------------------------</p>
+
+
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Home', root_path %></p>
