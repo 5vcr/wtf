@@ -2,7 +2,8 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
-  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"],
+  # added APP_ID and APP_SECRET as test; fb login not working in heroku "The parameter app_id is required"
+  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"], "APP_ID", "APP_SECRET",
     scope: 'email',
     info_fields: 'email, first_name, last_name',
     image_size: 'square',  # 50x50, guaranteed ratio
