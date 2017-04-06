@@ -1,0 +1,21 @@
+This is where the COMPARE MATRIX graphs go
+
+<h1>country is: <%= @country1 %></h1>
+<h1>category 1 is: <%= @category1 %></h1>
+
+
+<% @data.each do |statistic| %>
+  <pre>
+    <%= statistic.to_json(:except => [ :id, :created_at, :updated_at ]) %>
+  </pre>
+
+<% end %>
+
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Home', root_path %></p>
+
+
+<!-- -/queries/new/category?country=France
+-/queries/new/country?categories=TYT,UIYI,JH -->
