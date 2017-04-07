@@ -49,3 +49,7 @@ $(document).ready(function() {
 
         });
 });
+
+$('.hexagon-in2').mouseover(function() {
+    $('.graph-title').removeClass('hidden-title');
+});

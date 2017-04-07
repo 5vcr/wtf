@@ -9,22 +9,22 @@
 
 #hex4 {
   position: absolute;
-    top: 50px;
-    opacity: 0;
+  top: 50px;
+  opacity: 0;
 }
 
 #hex3 {
   position: absolute;
-    top: 50px;
-    right: 100px;
-    opacity: 0;
+  top: 50px;
+  right: 100px;
+  opacity: 0;
 }
 
 #hex5 {
   position: absolute;
-    top: 50px;
-    left: 85px;
-    opacity: 0;
+  top: 50px;
+  left: 85px;
+  opacity: 0;
 }
 
 #hex6 {
@@ -35,10 +35,10 @@
 }
 
 #hex7 {
-   position: absolute;
-    top: 188px;
-    right: 185px;
-    opacity: 0;
+ position: absolute;
+ top: 188px;
+ right: 185px;
+ opacity: 0;
 }
 
 #hex8 {
@@ -56,22 +56,32 @@
 
 #hex10 {
   position: absolute;
-top: 470px;
-left: 85px;
-opacity: 0;
+  top: 470px;
+  left: 85px;
+  opacity: 0;
+}
+
+.title-container {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hexagon {
   overflow: hidden;
   visibility: hidden;
   transform: rotate(120deg);
+  transition: all 600ms ease;
 }
 .hexagon-in1 {
   overflow: hidden;
   width: 100%;
   height: 100%;
   transform: rotate(-60deg);
-  }
+}
 .hexagon-in2 {
   width: 100%;
   height: 100%;
@@ -80,7 +90,7 @@ opacity: 0;
   visibility: visible;
   transform: rotate(-60deg);
   background-size: contain !important;
-  }
+}
 
 .hexagon1 {
   width: 350px;
@@ -90,42 +100,46 @@ opacity: 0;
 
 .hexagon:hover {
   opacity: 0;
-  
+  transform: rotate(900deg);
+}
+
+.hidden-title {
+  display: hidden;
 }
 
 @media(max-width: 1200px) {
  #hex2 {
   position: absolute;
-    top: 114px;
-    right: 50px;
-    opacity: 0;
+  top: 114px;
+  right: 50px;
+  opacity: 0;
 }
 
 #hex4 {
   position: absolute;
-    top: 250px;
-    opacity: 0;
+  top: 250px;
+  opacity: 0;
 }
 
 #hex1 {
-    position: absolute;
-    top: 114px;
-    left: 100px;
-    opacity: 0;
+  position: absolute;
+  top: 114px;
+  left: 100px;
+  opacity: 0;
 }
 
 #hex6 {
   position: absolute;
   top: 390px;
-    left: 100px;
-    opacity: 0;
+  left: 100px;
+  opacity: 0;
 }
 
 #hex7 {
-   position: absolute;
-    top: 388px;
-    right: 50px;
-    opacity: 0;
+ position: absolute;
+ top: 388px;
+ right: 50px;
+ opacity: 0;
 }
 
 #hex9 {
@@ -137,50 +151,50 @@ opacity: 0;
 @media(max-width: 990px) {
  #hex2 {
   position: absolute;
-    top: 114px;
-    right: -100px;
-    opacity: 0;
+  top: 114px;
+  right: -100px;
+  opacity: 0;
 }
 
 #hex4 {
   position: absolute;
-    top: 250px;
-    opacity: 0;
+  top: 250px;
+  opacity: 0;
 }
 
 #hex1 {
-    position: absolute;
-    top: 114px;
-    left: 30px;
-    opacity: 0;
+  position: absolute;
+  top: 114px;
+  left: 30px;
+  opacity: 0;
 }
 
 #hex6 {
   position: absolute;
   top: 390px;
-    left: 30px;
-    opacity: 0;
+  left: 30px;
+  opacity: 0;
 }
 
 #hex7 {
-   position: absolute;
-    top: 388px;
-    right: -100px;
-    opacity: 0;
+ position: absolute;
+ top: 388px;
+ right: -100px;
+ opacity: 0;
 }
 }
 @media(max-width: 767px) {
   .hexagon1 {
     width: 450px;
-  height: 300px;
+    height: 300px;
   }
 
-#hex4 {
-  position: absolute;
+  #hex4 {
+    position: absolute;
     top: 250px;
     opacity: 0;
     margin-left: 20%;
-}
+  }
 
 }
 
