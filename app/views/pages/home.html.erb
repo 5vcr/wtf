@@ -1,16 +1,16 @@
 <div class="container">
 	<div class="row">
-		
+		<h3>welcome to <span id="site-title">What The Finance</span></h3>
 		<div class="col-xs-12">
 			<p>What the finance takes all the numbers and nonsense of government spending figures and turns them into interactive data visualisations that are intuitive and clear. Take a browse around, tell all your friends, click all the things.</p>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-xs-12">
-      <%= link_to 'Browse by single country', queries_new_country_path, class: "btn btn-raised btn-md" %>
-      <%= link_to 'Compare multiple countries or categories', queries_new_compare_path, class: "btn btn-raised btn-md" %>
-      <%= link_to 'Browse by spending category', queries_new_category_path, class: "btn btn-raised btn-md" %>
+		<div class="col-xs-12 text-center">
+      <%= link_to 'Browse by single country', queries_new_country_path, class: "trans-btn btn btn-primary btn-md" %>
+      <%= link_to 'Compare multiple countries or categories', queries_new_compare_path, class: "trans-btn btn btn-info btn-md" %>
+      <%= link_to 'Browse by spending category', queries_new_category_path, class: "trans-btn btn btn-warning btn-md" %>
 		</div>
 		<!-- <div class="col-xs-4">
 		</div>
@@ -23,7 +23,8 @@
 	<div class="hexes">
 		<div class="row">
 		<h3>Featured graphs</h3>
-			<div class=" col-xs-12 col-sm-4">
+			<div class=" col-xs-12 col-sm-4 text-center">
+			<!-- <span>graph title</span> -->
 				<%= link_to root_path do %>
 				<div class="hex hidden-xs hidden-sm hidden-md" id="hex3">
 					<div class="hexagon hexagon1">
