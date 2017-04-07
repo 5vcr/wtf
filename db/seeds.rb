@@ -22,6 +22,7 @@ csv.each do |row|
   statistic = Statistic.create({
     country: row.to_hash['COUNTRY'],
     category: row.to_hash['CATEGORY'],
+    category_code: row.to_hash['CATEGORY_CODE'],
     year: row.to_hash['YEAR'],
     value: row.to_hash['VALUE'].to_f,
     unit: row.to_hash['UNIT'],
