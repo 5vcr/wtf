@@ -35,9 +35,9 @@ class QueriesController < ApplicationController
   end
 
   def eurostats_show_category
-    # query = Query.find(params[:id])
-    # first_categories = query.categories.split(",").first
-    # @category1 = first_categories
+  #   query = Query.find(params[:id])
+  #   first_categories = query.categories.split(",").first
+  #   @category1 = first_categories
 
     @category1 = params[:category1]
     @data = Statistic.where("category ILIKE ?", "%#{@category1}%")
