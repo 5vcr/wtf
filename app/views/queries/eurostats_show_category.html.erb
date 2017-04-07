@@ -1,17 +1,77 @@
-This is where SINGLE CATEGORY graphs go
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Defense spending 2015 (%GDP)</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="form-horizontal">
+  			<fieldset>
+					<div class="form-group">
+						<label class="control-label">Select category</label>
+						<div class="col-md-5">
+		        <select id="select-key" class="three columns form-control">
+							<option value="defense" selected="selected">Defense</option>
+							<option value="education">Education</option>
+							<option value="environment_protection">Environment Protection</option>
+						</select>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-8">
+			<div id="map"></div>
+		</div>
+		<div class="col-xs-4">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="card text-center">
+						<div class="card-block">
+							<h3>About this graph</h3>
+							<p class="card-text">Bacon ipsum dolor amet flank filet mignon short ribs hamburger tail pork chop. Flank ham hock beef ribs, pork chop tongue venison short ribs bacon doner. Boudin pork bresaola landjaeger, shankle ham hock turkey pork loin doner. Chuck beef frankfurter, pork belly salami cupim spare ribs bresaola t-bone.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Recommended graphs</h3>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<%= link_to root_path do %>
+              <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
+          <% end %>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<%= link_to root_path do %>
+              <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
+          <% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div >
+
+
 
 <h1>country is: <%= @country1 %></h1>
 <h1>category 1 is: <%= @category1 %></h1>
 
 <% @data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :id, :created_at, :updated_at ]) %>
-  </pre>
+<pre>
+	<%= statistic.to_json(:except => [ :id, :created_at, :updated_at ]) %>
+</pre>
 
 <% end %>
-
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Home', root_path %></p>
-

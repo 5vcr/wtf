@@ -17,6 +17,7 @@
 
 h1, h2, h3, h4, h5, p {
 	font-family: 'Quicksand', sans-serif;
+	color: #616161;
 }
 
 .Site {
@@ -27,4 +28,54 @@ h1, h2, h3, h4, h5, p {
 
 .Site-content {
   flex: 1;
+}
+
+.card-block {
+	padding: 15px;
+}
+
+// .about-card {
+// 	margin-top: 30px;
+// }
+
+.tooltip {
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px solid silver;
+  color: #222;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #a6a6a6;
+  opacity: 0.9;
+  position: absolute;
+}
+.tooltip p{
+  margin:0;
+}
+.hidden {
+  display: none;
+}
+
+#map {
+  width: 700px;
+  height: 500px;
+  border: 1px solid silver;
+  background: #F4FFFF;
+}
+
+/* Thanks to http://colorbrewer2.org/ */
+.YlGnBu .q0-5{fill:rgb(255,255,217)}
+.YlGnBu .q1-5{fill:rgb(237,248,177)}
+.YlGnBu .q2-5{fill:rgb(199,233,180)}
+.YlGnBu .q3-5{fill:rgb(127,205,187)}
+.YlGnBu .q4-5{fill:rgb(65,182,196)}
+.YlGnBu .q5-5{fill:rgb(29,145,192)}
+.YlGnBu .empty{fill:#ccc}
+
+g.features {
+  stroke: #d8d8d8;
+  stroke-width: 0.5;
+}
+g.features path:hover {
+  opacity: 0.5;
 }
