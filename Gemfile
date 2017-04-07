@@ -12,6 +12,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 gem 'bootstrap-material-design'
 gem 'sass-rails'
 gem 'jquery-rails'
