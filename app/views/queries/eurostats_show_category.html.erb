@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>Defense spending 2015 (%GDP)</h1>
+<h1> <strong><%= @data.first.category %></strong> in <%= @data.first.year %> (% GDP)
 		</div>
 	</div>
 	<div class="row">
@@ -60,17 +60,24 @@
 	</div>
 </div >
 
+<!-- TESTING BELOW -->
 
+<h1> <strong><%= @data.first.category %></strong> in <%= @data.first.year %> (% GDP)
 
-<h1>country is: <%= @country1 %></h1>
-<h1>category 1 is: <%= @category1 %></h1>
 
 <% @data.each do |statistic| %>
-<pre>
-	<%= statistic.to_json(:except => [ :id, :created_at, :updated_at ]) %>
-</pre>
+  <pre>
+    <%= statistic.to_json(:except => [ :id, :created_at, :updated_at, :category_code ]) %>
+  </pre>
 
 <% end %>
+
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Home', root_path %></p>
+
+
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
