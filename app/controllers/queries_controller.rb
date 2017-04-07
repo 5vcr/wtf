@@ -40,7 +40,7 @@ class QueriesController < ApplicationController
   #   @category1 = first_categories
 
     @category1 = params[:category1]
-    @data = Statistic.where("category ILIKE ?", "%#{@category1}%")
+    @data = Statistic.where("year = ? and category ILIKE ?", "2015", "%#{@category1}%")
     render "eurostats_show_category"
   end
 
