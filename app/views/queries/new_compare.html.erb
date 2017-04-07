@@ -1,57 +1,56 @@
 <!-- routes to bubble matrix, user chooses one or two countries, and one or two categories
 to compare -->
 
+<div class="container">
+
 <h1>Make Your Selections</h1>
 
-Choose one or more categories to compare:
+<p>Choose a single country or category to explore, or choose up to two of each to compare</p>
 
-<p><%= link_to 'All categories', category_path(0, category1: "") %></p>
-<p><%= link_to 'General public services', category_path(0, category1: "General public services") %></p>
-<p><%= link_to 'Defense', category_path(0, category1: "Defense") %></p>
-<p><%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety") %></p>
-<p><%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs") %></p>
-<p><%= link_to 'Environment protection', category_path(0, category1: "Environment protection") %></p>
-<p><%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities") %></p>
-<p><%= link_to 'Health', category_path(0, category1: "Health") %></p>
-<p><%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion") %></p>
-<p><%= link_to 'Education', category_path(0, category1: "Education") %></p>
-<p><%= link_to 'Social protection', category_path(0, category1: "Social protection") %></p>
-
-
+<%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'General public services', category_path(0, category1: "General public services"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Defence', category_path(0, category1: "Defence"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Environment protection', category_path(0, category1: "Environment protection"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Health', category_path(0, category1: "Health"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
 <p>--------------------------</p>
 
-Choose one or two countries to compare:
+Choose one or two countries to compare.</p>
 
-<p><%= link_to 'All Countries', country_path(0) %></p>
-<p><%= link_to 'Austria', country_path(0, country1: "Austria") %></p>
-<p><%= link_to 'Belgium', country_path(0, country1: "Belgium") %></p>
-<p><%= link_to 'Bulgaria', country_path(0, country1: "Belgium") %></p>
-<p><%= link_to 'Croatia', country_path(0) %></p>
-<p><%= link_to 'Cyprus', country_path(0) %></p>
-<p><%= link_to 'Czech Republic', country_path(0, country1: "Czech Republic") %></p>
-<p><%= link_to 'Denmark', country_path(0) %></p>
-<p><%= link_to 'Germany', country_path(0) %></p>
-<p><%= link_to 'Estonia', country_path(0) %></p>
-<p><%= link_to 'Finland', country_path(0) %></p>
-<p><%= link_to 'France', country_path(0) %></p>
-<p><%= link_to 'Greece', country_path(0) %></p>
-<p><%= link_to 'United Kingdom', country_path(0) %></p>
-<p><%= link_to 'Hungary', country_path(0) %></p>
-<p><%= link_to 'Ireland', country_path(0) %></p>
-<p><%= link_to 'Italy', country_path(0) %></p>
-<p><%= link_to 'Latvia', country_path(0) %></p>
-<p><%= link_to 'Lithuania', country_path(0) %></p>
-<p><%= link_to 'Luxembourg', country_path(0) %></p>
-<p><%= link_to 'Malta', country_path(0) %></p>
-<p><%= link_to 'Netherlands', country_path(0) %></p>
-<p><%= link_to 'Poland', country_path(0) %></p>
-<p><%= link_to 'Portugal', country_path(0) %></p>
-<p><%= link_to 'Romania', country_path(0) %></p>
-<p><%= link_to 'Slovenia', country_path(0) %></p>
-<p><%= link_to 'Slovakia', country_path(0) %></p>
-<p><%= link_to 'Spain', country_path(0) %></p>
-<p><%= link_to 'Sweden', country_path(0) %></p>
+<%= link_to 'All Countries', country_path(0, country1: "all"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Belgium', country_path(0, country1: "Austria"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Bulgaria', country_path(0, country1: "Bulgaria"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Croatia', country_path(0, country1: "Croatia"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Cyprus', country_path(0, country1: "Cyprus"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Czech Republic', country_path(0, country1: "Czech Republic"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Denmark', country_path(0, country1: "Denmark"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Germany', country_path(0, country1: "Germany"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Estonia', country_path(0, country1: "Estonia"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Finland', country_path(0, country1: "Finland"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
 
+<%= link_to 'France', country_path(0, country1: "France"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Greece', country_path(0, country1: "Greece"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'United Kingdom', country_path(0, country1: "United Kingdom"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Hungary', country_path(0, country1: "Hungary"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Ireland', country_path(0, country1: "Ireland"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Italy', country_path(0, country1: "Italy"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Latvia', country_path(0, country1: "Latvia"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Lithuania', country_path(0, country1: "Lithuania"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Luxembourg', country_path(0, country1: "Luxembourg"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Malta', country_path(0, country1: "Malta"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Netherlands', country_path(0, country1: "Netherlands"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Poland', country_path(0, country1: "Poland"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Portugal', country_path(0, country1: "Portugal"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Romania', country_path(0, country1: "Romania"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Slovenia', country_path(0, country1: "Slovenia"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Slovakia', country_path(0, country1: "Slovakia"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Spain', country_path(0, country1: "Spain"), class: "trans-btn btn btn-primary btn-sm" %>
+<%= link_to 'Sweden', country_path(0, country1: "Sweden"), class: "trans-btn btn btn-primary btn-sm" %>
 
 
 
@@ -61,3 +60,5 @@ Choose one or two countries to compare:
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>
+
+</div>
