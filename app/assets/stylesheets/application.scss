@@ -18,3 +18,13 @@
 h1, h2, h3, h4, h5, p {
 	font-family: 'Quicksand', sans-serif;
 }
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}

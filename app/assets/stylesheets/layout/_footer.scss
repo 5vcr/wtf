@@ -1,1 +1,24 @@
 // Your footer style
+.footer{
+  background-color: rgb(27,38,37);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  }
+
+.footer p,
+.footer h3, h5 {
+  color: #fafafa;
+  margin:0;
+}
+
+.footer i {
+  font-size: 15px;
+  color: #fafafa;
+}
+
+.footer a {
+  padding: 10px;
+}

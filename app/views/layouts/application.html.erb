@@ -12,12 +12,15 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-  <body>
+  <body class="Site">
     <%= render 'shared/flashes' %>
     <%= render 'shared/navbar' %>
     <!-- <p class="notice"><%= notice %></p> -->
     <!-- <p class="alert"><%= alert %></p> -->
-    <%= yield %>
+    <main class="Site-content">
+        <%= yield %>
+    </main>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
