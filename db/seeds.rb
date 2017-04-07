@@ -21,6 +21,7 @@ Statistic.delete_all
 csv.each do |row|
   statistic = Statistic.create({
     country: row.to_hash['COUNTRY'],
+    country_code: row.to_hash['COUNTRY_CODE'],
     category: row.to_hash['CATEGORY'],
     category_code: row.to_hash['CATEGORY_CODE'],
     year: row.to_hash['YEAR'],
