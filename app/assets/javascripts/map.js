@@ -71,14 +71,14 @@ var tooltip = d3.select("#map")
 // We define a geographical projection
 //     https://github.com/mbostock/d3/wiki/Geo-Projections
 // and set the initial zoom to show the features.
-var projection = d3.geo.mercator()
+var projection = d3.geoMercator()
   // The approximate scale factor was found through try and error
   .center([ 17, 55 ])
   .translate([ width/2, height/2 ])
   .scale([ width/1.4 ]);
 
 // We prepare a path object and apply the projection to it.
-var path = d3.geo.path()
+var path = d3.geoPath()
   .projection(projection);
 
 // We prepare an object to later have easier access to the data.
@@ -89,7 +89,7 @@ var dataById = d3.map();
 // assumption that no value can be larger than 100%).
 // The scale returns text values which can be used for the color CSS
 // classes (q0-9, q1-9 ... q8-9)
-var quantize = d3.scale.quantize()
+var quantize = d3.scaleQuantize()
     .range(d3.range(5).map(function(i) { return 'q' + i + '-5'; }));
 
 //Load the features from the TopoJSON.
@@ -105,15 +105,15 @@ d3.json('/test.json', function(error, features) {
     // the ID of the country, for example: dataById[2196]
     //NETHERLAD IS data[20]
 
-    dataById = d3.nest()
-      .key(function(d) { return d.id; })
-      .rollup(function(d) { return d[0]; })
-      .map(data);
+    // dataById = d3.nest()
+    //   .key(function(d) { return d.id; })
+    //   .rollup(function(d) { return d[0]; })
+    //   .map(data);
 
     dataByCountry = d3.nest()
       .key(function(d) { return d.country; })
       .rollup(function(d) { return d[0]; })
-      .map(data);
+      .object(data);
 
       // We add the features to the <g> element created before.
       // D3 wants us to select the (non-existing) path objects first ...
