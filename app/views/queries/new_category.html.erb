@@ -1,5 +1,8 @@
 <!-- Single category routes to Sven's graph type, all countries for selected category -->
 <!-- country1 = all (hidden param)  -->
+
+
+
 <div class="container">
 
 <h1>Make Your Selections</h1>
@@ -7,7 +10,6 @@
 <p>Choose a single country or category to explore, or choose up to two of each to compare</p>
 
 <%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'General public services', category_path(0, category1: "General public services"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Defence', category_path(0, category1: "Defence"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs"), class: "trans-btn btn btn-warning btn-sm" %>
