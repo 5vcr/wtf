@@ -79,13 +79,3 @@ g.features {
 g.features path:hover {
   opacity: 0.5;
 }
-
-.Site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.Site-content {
-  flex: 1;
-}
