@@ -2,7 +2,7 @@
   margin: 0 auto;
 }
 
-#hex-container {
+.hex-container {
   position: relative;
   height: 550px;
 }
@@ -100,7 +100,6 @@
 
 .hexagon:hover {
   opacity: 0;
-  transform: rotate(900deg);
 }
 
 .hidden-title {
