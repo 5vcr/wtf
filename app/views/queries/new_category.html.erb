@@ -1,5 +1,4 @@
 <!-- Single category routes to Sven's graph type, all countries for selected category -->
-<!-- country1 = all (hidden param)  -->
 
 <div class="container">
   <div class="row">
@@ -9,52 +8,10 @@
     </div>
   </div>
 
-  <%= link_to 'All', category_path(0, category1: ""), class: "trans-btn btn btn-sm" %>
+<%= render 'shared/new_category_form' %>
 
-  <%= link_to category_path(0, category1: "Defence") do %>
-    <i class="fa fa-4x fa-shield" aria-hidden="true"></i> Defence
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Economic affairs") do %>
-    <i class="fa fa-4x fa-money" aria-hidden="true"></i> Economic Affairs
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Education") do %>
-    <i class="fa fa-4x fa-graduation-cap" aria-hidden="true"></i> Education
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Environment protection") do %>
-    <i class="fa fa-4x fa-pagelines" aria-hidden="true"></i> Environment Protection
-  <% end %>
-
-  <%= link_to category_path(0, category1: "General public services") do %>
-    <i class="fa fa-4x fa-university" aria-hidden="true"></i> General Public Services
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Health") do %>
-    <i class="fa fa-4x fa-heartbeat" aria-hidden="true"></i> Health
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Housing and community amenities") do %>
-    <i class="fa fa-4x fa-home" aria-hidden="true"></i> Housing &amp; Community Amenities
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Public order and safety") do %>
-    <i class="fa fa-4x fa-balance-scale" aria-hidden="true"></i> Public Order &amp; Safety
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Recreation, culture and religion") do %>
-    <i class="fa fa-4x fa-music" aria-hidden="true"></i> Recreation, Culture &amp; Religion
-  <% end %>
-
-  <%= link_to category_path(0, category1: "Social protection") do %>
-    <i class="fa fa-4x fa-universal-access" aria-hidden="true"></i> Social Protection
-  <% end %>
 
   <p><%= link_to 'Go to your profile', dashboard_path %></p>
   <p><%= link_to 'Back', :back %></p>
   <p><%= link_to 'Home', root_path %></p>
   </div>
-
-<%= render 'shared/new_category_form' %>
-

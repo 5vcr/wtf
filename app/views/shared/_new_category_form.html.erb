@@ -1,17 +1,110 @@
-<%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'General public services', category_path(0, category1: "General public services"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Defence', category_path(0, category1: "Defence"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Environment protection', category_path(0, category1: "Environment protection"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Health', category_path(0, category1: "Health"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
 
-<%= simple_form_for @query do |f| %>
-  <%= f.hidden_field :countries, value: "", name: 'query[countries][]' %>
-  <%= f.hidden_field :categories, value: "Health", name: 'query[categories][]' %>
-  <%= image_submit_tag("Germany.png") %>
-<% end %>
+  <%= link_to 'All', category_path(0, category1: ""), class: "trans-btn btn btn-sm" %>
+
+  <%= link_to category_path(0, category1: "Defence") do %>
+    <i class="fa fa-4x fa-shield" aria-hidden="true"></i> Defence
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Economic affairs") do %>
+    <i class="fa fa-4x fa-money" aria-hidden="true"></i> Economic Affairs
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Education") do %>
+    <i class="fa fa-4x fa-graduation-cap" aria-hidden="true"></i> Education
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Environment protection") do %>
+    <i class="fa fa-4x fa-pagelines" aria-hidden="true"></i> Environment Protection
+  <% end %>
+
+  <%= link_to category_path(0, category1: "General public services") do %>
+    <i class="fa fa-4x fa-university" aria-hidden="true"></i> General Public Services
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Health") do %>
+    <i class="fa fa-4x fa-heartbeat" aria-hidden="true"></i> Health
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Housing and community amenities") do %>
+    <i class="fa fa-4x fa-home" aria-hidden="true"></i> Housing &amp; Community Amenities
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Public order and safety") do %>
+    <i class="fa fa-4x fa-balance-scale" aria-hidden="true"></i> Public Order &amp; Safety
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Recreation, culture and religion") do %>
+    <i class="fa fa-4x fa-music" aria-hidden="true"></i> Recreation, Culture &amp; Religion
+  <% end %>
+
+  <%= link_to category_path(0, category1: "Social protection") do %>
+    <i class="fa fa-4x fa-universal-access" aria-hidden="true"></i> Social Protection
+  <% end %>
+
+
+<!-- this is currently routing to new country, not new category. Fix it -->
+  <form method="get" action="/category/">
+  <input type="hidden" name="categories" value="Defence"/>
+  <input type="submit" value="doit"/>
+  </form>
+
+
+ <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Defence" %>
+    <%= f.submit "Defence" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Economic affairs", name: 'query[categories][]' %>
+    <%= f.submit "Economic affairs" %>
+  <% end %>
+
+ <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Education", name: 'query[categories][]' %>
+    <%= f.submit "Education" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Environment protection", name: 'query[categories][]' %>
+    <%= f.submit "Environment protection" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Health", name: 'query[categories][]' %>
+    <%= f.submit "Health" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "General public services", name: 'query[categories][]' %>
+    <%= f.submit "General public services" %>
+  <% end %>
+
+ <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Housing and community amenities", name: 'query[categories][]' %>
+    <%= f.submit "Housing and community amenities" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Public order and safety", name: 'query[categories][]' %>
+    <%= f.submit "Public order and safety" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Recreation, culture and religion", name: 'query[categories][]' %>
+    <%= f.submit "Recreation, culture and religion" %>
+  <% end %>
+
+  <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Social protection", name: 'query[categories][]' %>
+    <%= f.submit "Social protection" %>
+  <% end %>

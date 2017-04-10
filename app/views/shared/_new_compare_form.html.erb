@@ -1,11 +1,4 @@
-<!-- routes to bubble matrix, user chooses one or two countries, and one or two categories
-to compare -->
 
-<div class="container">
-
-<h1>Make Your Selections</h1>
-
-<p>Choose a single country or category to explore, or choose up to two of each to compare</p>
 
 <%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'General public services', category_path(0, category1: "General public services"), class: "trans-btn btn btn-warning btn-sm" %>
@@ -18,18 +11,3 @@ to compare -->
 <%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
-
-<p>--------------------------</p>
-
-Choose one or two countries to compare.</p>
-
-
-
-
-<p>--------------------------</p>
-
-
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Home', root_path %></p>
-
-</div>

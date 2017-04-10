@@ -1,5 +1,6 @@
 class QueriesController < ApplicationController
   def create
+    # make a helper function that takes category or country and converts to array
     if query_params[:countries].is_a?(Array)
       sorted_countries = query_params[:countries]
     else
@@ -7,14 +8,19 @@ class QueriesController < ApplicationController
     end
 
     sorted_countries = sorted_countries.sort.uniq.map { |country| country.parameterize }
+    sorted_countries_str = sorted_countries.join(",").capitalize
 
-    sorted_countries_str = sorted_countries.join(",")
-
-    sorted_categories = query_params[:categories].sort.uniq.join(",")
-
-    if query_params[:categories]
-      sorted_categories = query_params[:categories].sort.uniq.join(",")
+    if query_params[:categories].is_a?(Array)
+      sorted_categories = query_params[:categories]
+    else
+      sorted_categories = [query_params[:categories]]
     end
+
+    sorted_categories_str = sorted_categories.first
+
+    # if query_params[:categories]
+    #   sorted_categories = query_params[:categories].sort.uniq.join(",")
+    # end
 
     previous = Query.where(countries: sorted_countries_str, categories: sorted_categories).first
 
@@ -24,15 +30,18 @@ class QueriesController < ApplicationController
       query = Query.create(countries: sorted_countries_str, categories: sorted_categories)
     end
 
-    if sorted_countries.any?
+    # this method catches too many things; redirects incorrectly
+    if sorted_countries.any? && sorted_countries != [""]
       redirect_to country_path(query)
       return
     end
 
-    if sorted_categories.any?
+    if sorted_categories.any? && sorted_categories != [""]
       redirect_to category_path(query)
       return
     end
+
+    # if previous two if statements are false, default to below
 
     if sorted_categories.any? and sorted_countries.any?
       redirect_to compare_path(query)
@@ -42,18 +51,17 @@ class QueriesController < ApplicationController
 
   def eurostats_show_country
     @query = Query.find(params[:id])
-    first_country = @query.countries.split(",").first.capitalize
-    @data = Statistic.where(country: first_country)
 
+    first_country = @query.countries.split(",").first
+    @data = Statistic.where(country: first_country)
     render "eurostats_show_country"
   end
 
   def eurostats_show_category
-    query = Query.find(params[:id])
+    @query = Query.find(params[:id])
 
-    first_categories = query.categories.split(",").first
-    @data = Statistic.where(categories: first_categories, year: 2015)
-
+    first_category = @query.categories.split(",").first
+    @data = Statistic.where(category: first_category)
     render "eurostats_show_category"
   end
 
@@ -81,6 +89,6 @@ class QueriesController < ApplicationController
   private
 
   def query_params
-    params.require(:query).permit(:countries, {:countries => []}, {:categories => []})
+    params.require(:query).permit(:countries, {:countries => []}, :categories, {:categories => []})
   end
 end
