@@ -4,17 +4,17 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'accounts/omniauth_callbacks' }
 
   get 'users/dashboard', as: :dashboard # dashboard_path
-  post 'users/create'
+  post 'users' => 'users#create'
 
 
-  post 'feedbacks/create' => 'feedbacks#create'
+  post 'feedbacks' => 'feedbacks#create'
   get 'feedbacks/new' => 'feedbacks#new'
 
   get 'queries/new/country', to: 'queries#new_country'
   get 'queries/new/category', to: 'queries#new_category'
   get 'queries/new/compare', to: 'queries#new_compare'
 
-  post 'queries/create' => 'queries#create'
+  post 'queries' => 'queries#create'
   get 'queries/build_graph', to: 'queries#build_graph'
 
   get 'queries/:id/country', to: 'queries#eurostats_show_country', as: :country # :id of the graph

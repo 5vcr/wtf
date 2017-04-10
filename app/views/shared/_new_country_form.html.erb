@@ -1,0 +1,15 @@
+
+<% Statistic.countries.each do |country| %>
+
+    country:
+    <%= country %>
+
+    <%= simple_form_for @query do |f| %>
+      <%= f.hidden_field :countries, value: country %>
+      <%= f.hidden_field :categories, value: "", name: 'query[categories][]' %>
+      <%= image_submit_tag("flags/#{country.parameterize}.png") %>
+    <% end %>
+
+
+<% end %>
+
