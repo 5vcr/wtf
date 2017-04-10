@@ -2,23 +2,53 @@
 <!-- country1 = all (hidden param)  -->
 
 
-
 <div class="container">
 
 <h1>Make Your Selections</h1>
 
 <p>Choose a single country or category to explore, or choose up to two of each to compare</p>
 
-<%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Defence', category_path(0, category1: "Defence"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Environment protection', category_path(0, category1: "Environment protection"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Health', category_path(0, category1: "Health"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
-<%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'All Categories', category_path(0, category1: ""), class: "trans-btn btn btn-sm" %>
+
+<%= link_to category_path(0, category1: "Defence") do %>
+  <i class="fa fa-shield" aria-hidden="true"></i> Defence
+<% end %>
+
+<%= link_to category_path(0, category1: "Economic affairs") do %>
+  <i class="fa fa-money" aria-hidden="true"></i> Economic Affairs
+<% end %>
+
+<%= link_to category_path(0, category1: "Education") do %>
+  <i class="fa fa-graduation-cap" aria-hidden="true"></i> Education
+<% end %>
+
+<%= link_to category_path(0, category1: "Environment protection") do %>
+  <i class="fa fa-pagelines" aria-hidden="true"></i> Environment Protection
+<% end %>
+
+<%= link_to category_path(0, category1: "General public services") do %>
+  <i class="fa fa-university" aria-hidden="true"></i> General Public Services
+<% end %>
+
+<%= link_to category_path(0, category1: "Health") do %>
+  <i class="fa fa-heartbeat" aria-hidden="true"></i> Health
+<% end %>
+
+<%= link_to category_path(0, category1: "Housing and community amenities") do %>
+  <i class="fa fa-home" aria-hidden="true"></i> Housing &amp; Community Amenities
+<% end %>
+
+<%= link_to category_path(0, category1: "Public order and safety") do %>
+  <i class="fa fa-balance-scale" aria-hidden="true"></i> Public Order &amp; Safety
+<% end %>
+
+<%= link_to category_path(0, category1: "Recreation, culture and religion") do %>
+  <i class="fa fa-music" aria-hidden="true"></i> Recreation, Culture &amp; Religion
+<% end %>
+
+<%= link_to category_path(0, category1: "Social protection") do %>
+  <i class="fa fa-universal-access" aria-hidden="true"></i> Social Protection
+<% end %>
 
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Back', :back %></p>
