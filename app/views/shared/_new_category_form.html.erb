@@ -1,0 +1,17 @@
+<%= link_to 'All categories', category_path(0, category1: ""), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'General public services', category_path(0, category1: "General public services"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Defence', category_path(0, category1: "Defence"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Public order and safety', category_path(0, category1: "Public order and safety"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Economic affairs', category_path(0, category1: "Economic affairs"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Environment protection', category_path(0, category1: "Environment protection"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Housing and community amenities', category_path(0, category1: "Housing and community amenities"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Health', category_path(0, category1: "Health"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
+<%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
+
+<%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "", name: 'query[countries][]' %>
+  <%= f.hidden_field :categories, value: "Health", name: 'query[categories][]' %>
+  <%= image_submit_tag("Germany.png") %>
+<% end %>

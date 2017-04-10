@@ -3,6 +3,10 @@ class QueriesController < ApplicationController
     sorted_countries = query_params[:countries].sort.uniq.join(",")
     sorted_categories = query_params[:categories].sort.uniq.join(",")
 
+    if query_params[:categories]
+      sorted_categories = query_params[:categories].sort.uniq.join(",")
+    end
+
     previous = Query.where(countries: sorted_countries, categories: sorted_categories)
 
     if previous
@@ -12,22 +16,22 @@ class QueriesController < ApplicationController
     end
 
     if query_params[:countries].sort.uniq.any?
-      redirect_to eurostats_country_show_path(query)
+      redirect_to country_path(query)
     end
 
     if query_params[:categories].sort.uniq.any?
-      redirect_to eurostats_category_show_path(query)
+      redirect_to category_path(query)
     end
 
     if query_params[:categories].sort.uniq.any? and query_params[:countries].sort.uniq.any?
-      redirect_to eurostats_compare_show_path(query)
+      redirect_to compare_path(query)
     end
   end
 
   def eurostats_show_country
-    # query = Query.find(params[:id])
-    # first_country = query.countries.split(",").first
-    # @country1 = first_country
+    query = Query.find(params[:id])
+    first_country = query.countries.split(",").first
+    @country1 = first_country
 
     @country1 = params[:country1]
     @data = Statistic.where(country: @country1)
@@ -35,9 +39,9 @@ class QueriesController < ApplicationController
   end
 
   def eurostats_show_category
-  #   query = Query.find(params[:id])
-  #   first_categories = query.categories.split(",").first
-  #   @category1 = first_categories
+    query = Query.find(params[:id])
+    first_categories = query.categories.split(",").first
+    @category1 = first_categories
 
     @category1 = params[:category1]
     @data = Statistic.where("year = ? and category ILIKE ?", "2015", "%#{@category1}%")
@@ -68,6 +72,6 @@ class QueriesController < ApplicationController
   private
 
   def query_params
-    params.require(:query).permit()
+    params.require(:query).permit({:countries => []}, {:categories => []})
   end
 end
