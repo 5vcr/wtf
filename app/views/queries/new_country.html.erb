@@ -6,38 +6,9 @@
 
 Choose one country to see all spending for this country.</p>
 
-<%= link_to 'All Countries', country_path(0, country1: "all"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Belgium', country_path(0, country1: "Austria"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Bulgaria', country_path(0, country1: "Bulgaria"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Croatia', country_path(0, country1: "Croatia"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Cyprus', country_path(0, country1: "Cyprus"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Czech Republic', country_path(0, country1: "Czech Republic"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Denmark', country_path(0, country1: "Denmark"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Germany', country_path(0, country1: "Germany"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Estonia', country_path(0, country1: "Estonia"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Finland', country_path(0, country1: "Finland"), class: "trans-btn btn btn-primary btn-sm", class: "trans-btn btn btn-primary btn-sm" %>
+<%= render 'shared/new_country_form' %>
 
-<%= link_to 'France', country_path(0, country1: "France"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Greece', country_path(0, country1: "Greece"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'United Kingdom', country_path(0, country1: "United Kingdom"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Hungary', country_path(0, country1: "Hungary"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Ireland', country_path(0, country1: "Ireland"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Italy', country_path(0, country1: "Italy"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Latvia', country_path(0, country1: "Latvia"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Lithuania', country_path(0, country1: "Lithuania"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Luxembourg', country_path(0, country1: "Luxembourg"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Malta', country_path(0, country1: "Malta"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Netherlands', country_path(0, country1: "Netherlands"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Poland', country_path(0, country1: "Poland"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Portugal', country_path(0, country1: "Portugal"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Romania', country_path(0, country1: "Romania"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Slovenia', country_path(0, country1: "Slovenia"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Slovakia', country_path(0, country1: "Slovakia"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Spain', country_path(0, country1: "Spain"), class: "trans-btn btn btn-primary btn-sm" %>
-<%= link_to 'Sweden', country_path(0, country1: "Sweden"), class: "trans-btn btn btn-primary btn-sm" %>
-
-
---------------------------</p>
+-------------------------- </p>
 
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Back', :back %></p>
