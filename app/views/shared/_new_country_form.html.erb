@@ -1,15 +1,13 @@
 
 <% Statistic.countries.each do |country| %>
+	<div class="col-xs-6 col-sm-3">
+	  <%= country %>
 
-    country:
-    <%= country %>
-
-    <%= simple_form_for @query do |f| %>
-      <%= f.hidden_field :countries, value: country %>
-      <%= f.hidden_field :categories, value: "", name: 'query[categories][]' %>
-      <%= image_submit_tag("flags/#{country.parameterize}.png") %>
-    <% end %>
-
-
+	  <%= simple_form_for @query do |f| %>
+	    <%= f.hidden_field :countries, value: country %>
+	    <%= f.hidden_field :categories, value: "", name: 'query[categories][]' %>
+	    <%= image_submit_tag("flags/#{country.parameterize}.png") %>
+	 <% end %>
+	</div>
 <% end %>
 
