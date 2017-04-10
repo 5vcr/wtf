@@ -17,14 +17,17 @@ class QueriesController < ApplicationController
 
     if query_params[:countries].sort.uniq.any?
       redirect_to country_path(query)
+      return
     end
 
     if query_params[:categories].sort.uniq.any?
       redirect_to category_path(query)
+      return
     end
 
     if query_params[:categories].sort.uniq.any? and query_params[:countries].sort.uniq.any?
       redirect_to compare_path(query)
+      return
     end
   end
 
