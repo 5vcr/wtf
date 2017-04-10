@@ -1,50 +1,59 @@
 class QueriesController < ApplicationController
   def create
-    sorted_countries = query_params[:countries].sort.uniq.join(",")
+    if query_params[:countries].is_a?(Array)
+      sorted_countries = query_params[:countries]
+    else
+      sorted_countries = [query_params[:countries]]
+    end
+
+    sorted_countries = sorted_countries.sort.uniq.map { |country| country.parameterize }
+
+    sorted_countries_str = sorted_countries.join(",")
+
     sorted_categories = query_params[:categories].sort.uniq.join(",")
 
     if query_params[:categories]
       sorted_categories = query_params[:categories].sort.uniq.join(",")
     end
 
-    previous = Query.where(countries: sorted_countries, categories: sorted_categories)
+    previous = Query.where(countries: sorted_countries_str, categories: sorted_categories).first
 
     if previous
       query = previous
     else
-      query = Query.create(countries: sorted_countries, categories: sorted_categories)
+      query = Query.create(countries: sorted_countries_str, categories: sorted_categories)
     end
 
-    if query_params[:countries].sort.uniq.any?
+    if sorted_countries.any?
       redirect_to country_path(query)
+      return
     end
 
-    if query_params[:categories].sort.uniq.any?
+    if sorted_categories.any?
       redirect_to category_path(query)
+      return
     end
 
-    if query_params[:categories].sort.uniq.any? and query_params[:countries].sort.uniq.any?
+    if sorted_categories.any? and sorted_countries.any?
       redirect_to compare_path(query)
+      return
     end
   end
 
   def eurostats_show_country
-    query = Query.find(params[:id])
-    first_country = query.countries.split(",").first
-    @country1 = first_country
+    @query = Query.find(params[:id])
+    first_country = @query.countries.split(",").first.capitalize
+    @data = Statistic.where(country: first_country)
 
-    @country1 = params[:country1]
-    @data = Statistic.where(country: @country1)
     render "eurostats_show_country"
   end
 
   def eurostats_show_category
     query = Query.find(params[:id])
-    first_categories = query.categories.split(",").first
-    @category1 = first_categories
 
-    @category1 = params[:category1]
-    @data = Statistic.where("year = ? and category ILIKE ?", "2015", "%#{@category1}%")
+    first_categories = query.categories.split(",").first
+    @data = Statistic.where(categories: first_categories, year: 2015)
+
     render "eurostats_show_category"
   end
 
@@ -72,6 +81,6 @@ class QueriesController < ApplicationController
   private
 
   def query_params
-    params.require(:query).permit({:countries => []}, {:categories => []})
+    params.require(:query).permit(:countries, {:countries => []}, {:categories => []})
   end
 end

@@ -1,12 +1,15 @@
 This is where all SINGLE COUNTRY graphs go
 
-<h1>country is: <%= @country1 %></h1>
+<h1>country is: <%= @query.countries_display.first %></h1>
 <h1>category 1 is: <%= @category1 %></h1>
 
+<pre>
+  <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
+</pre>
 
 <% @data.each do |statistic| %>
   <pre>
-    <%= statistic.to_json(:except => [ :id, :created_at, :updated_at ]) %>
+    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
   </pre>
 
 <% end %>
