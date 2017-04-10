@@ -1,0 +1,61 @@
+Country,Category,Value
+UK,AHealth,10
+UK,BEducation,20
+UK,CDefense,5
+UK,DHousing,50
+UK,EGeneral,15
+UK,FPublic,5
+UK,GEconomic affairs,8
+UK,HEnvironment,19
+UK,IRecreation,21
+UK,JSocial,5
+NL,AHealth,34
+NL,BEducation,9
+NL,CDefense,45
+NL,DHousing,4
+NL,EGeneral,13
+NL,FPublic,11
+NL,GEconomic affairs,40
+NL,HEnvironment,20
+NL,IRecreation,26
+NL,JSocial,0
+Spain,AHealth,9
+Spain,BEducation,21
+Spain,CDefense,17
+Spain,DHousing,1
+Spain,EGeneral,22
+Spain,FPublic,18
+Spain,GEconomic affairs,38
+Spain,HEnvironment,16
+Spain,IRecreation,17
+Spain,JSocial,8
+France,AHealth,19
+France,BEducation,25
+France,CDefense,7
+France,DHousing,71
+France,EGeneral,20
+France,FPublic,30
+France,GEconomic affairs,37
+France,HEnvironment,3
+France,IRecreation,13
+France,JSocial,7
+Sweden,AHealth,6
+Sweden,BEducation,16
+Sweden,CDefense,17
+Sweden,DHousing,10
+Sweden,EGeneral,2
+Sweden,FPublic,55
+Sweden,GEconomic affairs,43
+Sweden,HEnvironment,31
+Sweden,IRecreation,15
+Sweden,JSocial,17
+Germany,AHealth,2
+Germany,BEducation,30
+Germany,CDefense,40
+Germany,DHousing,20
+Germany,EGeneral,25
+Germany,FPublic,35
+Germany,GEconomic affairs,12
+Germany,HEnvironment,6
+Germany,IRecreation,2
+Germany,JSocial,22

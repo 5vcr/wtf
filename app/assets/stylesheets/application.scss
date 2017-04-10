@@ -97,3 +97,64 @@ g.features {
 g.features path:hover {
   opacity: 0.5;
 }
+
+@media screen and (min-width: 992px) { 
+  .col-8 {
+    width: 12.5%;
+    margin: 30px 0 30px 0;
+  }
+ }
+
+input[type=image] {
+  padding: 8px 0 8px 0;
+}
+
+input[type=image]:hover {
+  opacity: 0.8;
+}
+
+.fa-shield {
+  color: #263e5c;
+}
+
+.fa-money {
+  color: #3d6099;
+}
+
+.fa-graduation-cap {
+  color: #4895b5;
+}
+
+.fa-pagelines {
+  color: #54b4d3;
+}
+
+.fa-university {
+  color: #00e7ff;
+}
+
+.fa-heartbeat {
+  color: #3ef8ca;
+}
+
+.fa-home {
+  color: #ff7540;
+}
+
+.fa-balance-scale {
+  color: #f45b3d;
+}
+
+.fa-music {
+  color: #cc2c14;
+}
+
+.fa-universal-access {
+  color: #ae1511;
+}
+
+
+
+
+
+
