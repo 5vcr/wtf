@@ -1,6 +1,6 @@
 class Statistic < ApplicationRecord
   def self.countries
-    all = self.all.pluck(:country).uniq.sort.map { |country| country.capitalize }
+    all = self.all.pluck(:country).uniq.sort
 
     more = ["Europe"]
 
