@@ -1,22 +1,20 @@
-This is where the COMPARE MATRIX graphs go
-
-<% @data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
-  </pre>
-
-<% end %>
+<p>This is where the COMPARE MATRIX graphs go</p>
 
 
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Go to your profile', dashboard_path %></p>
-<p><%= link_to 'Home', root_path %></p>
+<div id="shit_for_dimple" data="<%= @compare_data %>"></div>
 
 <!-- -/queries/new/category?country=France
 -/queries/new/country?categories=TYT,UIYI,JH -->
 
 
 <div id="chartContainer"></div>
+<script>
+  var data = <%= raw @compare_data %>;
+</script>
 
 <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
 
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Home', root_path %></p>
