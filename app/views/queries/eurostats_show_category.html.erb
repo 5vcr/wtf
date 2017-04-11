@@ -56,16 +56,7 @@
 	</div>
 </div>
 <!-- js libraries -->
-<pre>
-  <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
-</pre>
 
-<% @category_data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
-  </pre>
-
-<% end %>
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>
