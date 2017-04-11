@@ -42,17 +42,11 @@
   <% end %>
 
 
-<!-- this is currently routing to new country, not new category. Fix it -->
-  <form method="get" action="/category/">
-  <input type="hidden" name="categories" value="Defence"/>
-  <input type="submit" value="doit"/>
-  </form>
-
 
  <%= simple_form_for @query do |f| %>
     <%= f.hidden_field :countries, value: "" %>
-    <%= f.hidden_field :categories, value: "Defence" %>
-    <%= f.submit "Defence" %>
+    <%= f.hidden_field :categories, value: "Defense" %>
+    <%= f.submit "Defense" %>
   <% end %>
 
   <%= simple_form_for @query do |f| %>
