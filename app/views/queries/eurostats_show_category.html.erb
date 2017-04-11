@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-<h1> <strong><%= @data.first.category %></strong> in <%= @data.first.year %> (% GDP)
+
 		</div>
 	</div>
 	<div class="row">
@@ -59,21 +59,13 @@
 			</div>
 		</div>
 	</div>
-</div >
+</div>
 <!-- JS libraries -->
-<script src="https://d3js.org/d3.v4.min.js"></script>
+
 
 <!-- TESTING BELOW -->
 
-<h1> <strong><%= @data.first.category %></strong> in <%= @data.first.year %> (% GDP)
 
-
-<% @data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :id, :created_at, :updated_at, :category_code ]) %>
-  </pre>
-
-<% end %>
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>

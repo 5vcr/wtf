@@ -1,4 +1,5 @@
 $(document).ready(function() {
+// if (document.getElementById("hex-container")) {
 
     /* Check the location of each desired element */
     $('#hex4').each( function(i){
@@ -48,7 +49,7 @@ $(document).ready(function() {
         $(this).animate({'opacity':'1'},1000);
 
     });
-
+// }
 });
 
 $('.hexagon-in2').mouseover(function() {
