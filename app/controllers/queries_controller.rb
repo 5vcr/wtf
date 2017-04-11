@@ -44,18 +44,19 @@ class QueriesController < ApplicationController
 
     first_country = @query.countries.split(",").first
 
-    @data = Statistic.where(country: first_country)
+    @data = Statistic.where(country: first_country, year: "2015")
 
     render "eurostats_show_country"
   end
 
   def eurostats_show_category
+    # put category context generator logic here
     @query = Query.find(params[:id])
 
     first_category = @query.categories.split(",").first
     # first_category = @query.categories.split(",").first.capitalize
 
-    @data = Statistic.where(category: first_category)
+    @data = Statistic.where(category: first_category, year: "2015")
 
     render "eurostats_show_category"
   end
@@ -69,9 +70,10 @@ class QueriesController < ApplicationController
     countries = countries.map { |i| "%#{i}%" }
     categories = categories.map { |i| "%#{i}%" }
 
-    @data = Statistic.where('category ilike any ( array[?] )', categories)
-    @data = @data.where('country ilike any ( array[?] )', countries)
-
+    @compare_data = Statistic.where('year = ? AND category ilike any ( array[?] )', '2015', categories)
+    @compare_data = @compare_data.where('country ilike any ( array[?] )', countries)
+    @compare_data = @compare_data.select { |data| data.category_code.size <= 4 }
+    @compare_data = @compare_data.to_json(:except => [ :year, :id, :created_at, :updated_at])
     render "eurostats_show_compare"
   end
 

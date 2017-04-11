@@ -62,8 +62,18 @@
 </div>
 <!-- JS libraries -->
 
-
 <!-- TESTING BELOW -->
+
+<pre>
+  <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
+</pre>
+
+<% @data.each do |statistic| %>
+  <pre>
+    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
+  </pre>
+
+<% end %>
 
 
 
