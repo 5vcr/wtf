@@ -1,11 +1,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
 			<form class="form-horizontal">
   			<fieldset>
 					<div class="form-group">
@@ -60,22 +55,17 @@
 		</div>
 	</div>
 </div>
-<!-- JS libraries -->
-
-<!-- TESTING BELOW -->
-
+<!-- js libraries -->
 <pre>
   <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
 </pre>
 
-<% @data.each do |statistic| %>
+<% @category_data.each do |statistic| %>
   <pre>
     <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
   </pre>
 
 <% end %>
-
-
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Home', root_path %></p>

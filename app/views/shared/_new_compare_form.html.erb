@@ -11,3 +11,104 @@
 <%= link_to 'Recreation, culture and religion', category_path(0, category1: "Recreation, culture and religion"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Education', category_path(0, category1: "Education"), class: "trans-btn btn btn-warning btn-sm" %>
 <%= link_to 'Social protection', category_path(0, category1: "Social protection"), class: "trans-btn btn btn-warning btn-sm" %>
+
+
+  <div class="col-10 col-xs-3 text-center">
+    <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Defense" %>
+    <%= button_tag type: 'submit', class: "cat-btn" do %>
+    <i class="fa fa-3x fa-shield" aria-hidden="true"></i><p class="teeny-font">Defense</p>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div class="col-10 col-xs-3 text-center">
+    <%= simple_form_for @query do |f| %>
+    <%= f.hidden_field :countries, value: "" %>
+    <%= f.hidden_field :categories, value: "Economic affairs", name: 'query[categories][]' %>
+    <%= button_tag type: 'submit', class: "cat-btn" do %>
+    <i class="fa fa-3x fa-money" aria-hidden="true"></i><p class="teeny-font">Economic Affairs</p>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div class="col-10 col-xs-3 text-center">
+   <%= simple_form_for @query do |f| %>
+   <%= f.hidden_field :countries, value: "" %>
+   <%= f.hidden_field :categories, value: "Education", name: 'query[categories][]' %>
+   <%= button_tag type: 'submit', class: "cat-btn" do %>
+   <i class="fa fa-3x fa-graduation-cap" aria-hidden="true"></i><p class="teeny-font">Education</p>
+   <% end %>
+   <% end %>
+ </div>
+
+ <div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "Environment protection", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-pagelines" aria-hidden="true"></i><p class="teeny-font">Environment Protection</p>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "General public services", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-university" aria-hidden="true"></i><p class="teeny-font">General Public Services</p>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "Health", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-heartbeat" aria-hidden="true"></i><p class="teeny-font">Health</p>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+ <%= simple_form_for @query do |f| %>
+ <%= f.hidden_field :countries, value: "" %>
+ <%= f.hidden_field :categories, value: "Housing and community amenities", name: 'query[categories][]' %>
+ <%= button_tag type: 'submit', class: "cat-btn" do %>
+ <i class="fa fa-3x fa-home" aria-hidden="true"></i><p class="teeny-font">Housing &amp; Community Amenities</p>
+ <% end %>
+ <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "Public order and safety", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-balance-scale" aria-hidden="true"></i><p class="teeny-font">Public Order &amp; Safety</p>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "Recreation, culture and religion", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-music" aria-hidden="true"></i><p class="teeny-font">Recreation, Culture &amp; Religion</p>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="col-10 col-xs-3 text-center">
+  <%= simple_form_for @query do |f| %>
+  <%= f.hidden_field :countries, value: "" %>
+  <%= f.hidden_field :categories, value: "Social protection", name: 'query[categories][]' %>
+  <%= button_tag type: 'submit', class: "cat-btn" do %>
+  <i class="fa fa-3x fa-universal-access" aria-hidden="true"></i><p class="teeny-font">Social Protection</p>
+  <% end %>
+  <% end %>
+</div>
