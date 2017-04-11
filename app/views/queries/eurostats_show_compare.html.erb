@@ -1,16 +1,4 @@
 
-<% @country_data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
-  </pre>
-<% end %>
-
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Go to your profile', dashboard_path %></p>
-<p><%= link_to 'Home', root_path %></p>
-
-<!-- -/queries/new/category?country=France
--/queries/new/country?categories=TYT,UIYI,JH -->
 <div class="container">
 	<div class="row">
 		<div class="col-xs-8">
@@ -54,7 +42,7 @@
   var data = <%= raw @compare_data %>;
 </script>
 
-<!-- <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script> -->
+<script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
 
 <p><%= link_to 'Back', :back %></p>
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
