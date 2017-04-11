@@ -2,13 +2,13 @@
 <% Statistic.countries.each do |country| %>
 	<div class="col-8 col-xs-3 text-center">
 
-		<h5><%= country.titleize %></h5>
 
 	  <%= simple_form_for @query do |f| %>
 	    <%= f.hidden_field :countries, value: country %>
 	    <%= f.hidden_field :categories, value: "", name: 'query[categories][]' %>
 	    <%= image_submit_tag("flags/#{country.parameterize}.png") %>
 	 <% end %>
+		<h5><%= country.titleize %></h5>
 	</div>
 <% end %>
 
