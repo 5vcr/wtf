@@ -8,11 +8,15 @@ to compare -->
 <p>Choose a single country or category to explore, or choose up to two of each to compare.
 Choose one or two countries to compare.</p>
 
-<!-- routing to category always, not to compare, fix it. -->
+<!-- routing to category  always, not to compare, fix it. Not capturing all of the data now - only
+passsing one value from drop downs. -->
 
 <%= simple_form_for @query do |f| %>
-  <%= f.input :countries, collection: [@query.countries]  %>
-  <%= f.input :categories, collection: [@query.countries]  %>
+
+  <%= f.input :countries, collection: Statistic.countries, as: :check_boxes %>
+
+  <%= f.input :categories, collection: [ "Defence", "Economic Affairs", "Education", "Environment Protection", "General Public Services", "Health", "Housing & Community Amenities", "Public Order & Safety", "Recreation, Culture & Religion", "Social Protection"], as: :check_boxes %>
+
   <%= f.button :submit, "Compare" %>
 <% end %>
 

@@ -1,51 +1,41 @@
 class QueriesController < ApplicationController
   def create
     # make a helper function that takes category or country and converts to array
-    if query_params[:countries].is_a?(Array)
-      sorted_countries = query_params[:countries]
-    else
-      sorted_countries = [query_params[:countries]]
-    end
+    sorted_countries = query_params[:countries].is_a?(Array) ? query_params[:countries] : [query_params[:countries]]
+    sorted_countries = sorted_countries.sort.uniq
+    # sorted_countries = sorted_countries.sort.uniq.map { |country| country.parameterize }
+    sorted_countries = sorted_countries.select { |i| i.present? }
+    sorted_countries_str = sorted_countries.join(",")
 
-    sorted_countries = sorted_countries.sort.uniq.map { |country| country.parameterize }
-    sorted_countries_str = sorted_countries.join(",").capitalize
+    sorted_categories = query_params[:categories].is_a?(Array) ? query_params[:categories] : [query_params[:categories]]
+    sorted_categories = sorted_categories.sort.uniq
+    # sorted_categories = sorted_categories.sort.uniq.map { |category| category.parameterize }
+    sorted_categories = sorted_categories.select { |i| i.present? }
+    sorted_categories_str = sorted_categories.join(",")
 
-    if query_params[:categories].is_a?(Array)
-      sorted_categories = query_params[:categories]
-    else
-      sorted_categories = [query_params[:categories]]
-    end
 
-    sorted_categories_str = sorted_categories.first
-
-    # if query_params[:categories]
-    #   sorted_categories = query_params[:categories].sort.uniq.join(",")
-    # end
-
-    previous = Query.where(countries: sorted_countries_str, categories: sorted_categories).first
+    # create or get a query
+    previous = Query.where(countries: sorted_countries_str, categories: sorted_categories_str).first
 
     if previous
       query = previous
     else
-      query = Query.create(countries: sorted_countries_str, categories: sorted_categories)
+      query = Query.create(countries: sorted_countries_str, categories: sorted_categories_str)
     end
 
-    # this method catches too many things; redirects incorrectly
-    if sorted_countries.any? && sorted_countries != [""]
-      redirect_to country_path(query)
-      return
+    # work with country
+    if sorted_countries.any? and sorted_categories.empty?
+      return redirect_to country_path(query)
     end
 
-    if sorted_categories.any? && sorted_categories != [""]
-      redirect_to category_path(query)
-      return
+    # categories
+    if sorted_countries.empty? and sorted_categories.any?
+      return redirect_to category_path(query)
     end
 
-    # if previous two if statements are false, default to below
-
-    if sorted_categories.any? and sorted_countries.any?
-      redirect_to compare_path(query)
-      return
+    # compare
+    if sorted_countries.any? and sorted_categories.any?
+      return redirect_to compare_path(query)
     end
   end
 
@@ -53,7 +43,9 @@ class QueriesController < ApplicationController
     @query = Query.find(params[:id])
 
     first_country = @query.countries.split(",").first
+
     @data = Statistic.where(country: first_country)
+
     render "eurostats_show_country"
   end
 
@@ -61,15 +53,24 @@ class QueriesController < ApplicationController
     @query = Query.find(params[:id])
 
     first_category = @query.categories.split(",").first
+    # first_category = @query.categories.split(",").first.capitalize
+
     @data = Statistic.where(category: first_category)
+
     render "eurostats_show_category"
   end
 
   def eurostats_show_compare
-    @countries = params[:countries]
-    @categories = params[:categories]
+    @query = Query.find(params[:id])
 
-    @data = Statistic.where(country: @countries, categories: @categories)
+    countries = @query.countries.split(",")
+    categories = @query.categories.split(",")
+
+    countries = countries.map { |i| "%#{i}%" }
+    categories = categories.map { |i| "%#{i}%" }
+
+    @data = Statistic.where('category ilike any ( array[?] )', categories)
+    @data = @data.where('country ilike any ( array[?] )', countries)
 
     render "eurostats_show_compare"
   end
