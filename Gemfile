@@ -7,7 +7,6 @@ gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
-# gem 'd3_rails'
 
 gem 'devise'
 gem 'omniauth'

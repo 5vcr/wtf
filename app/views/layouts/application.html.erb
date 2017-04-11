@@ -11,6 +11,8 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
   </head>
   <body class="Site">
     <%= render 'shared/flashes' %>
@@ -20,6 +22,7 @@
     <main class="Site-content">
         <%= yield %>
     </main>
+
     <%= javascript_include_tag "application" %>
 <!-- footer temp removed -->
   </body>

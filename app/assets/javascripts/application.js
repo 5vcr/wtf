@@ -3,8 +3,14 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap-material-design
+//= require d3.v4.min
+//= require dimple.v2.3.0.min
+//= require bubble-matrix
+//= require topojson
+//= require map
+//= require hexagons
 
-//= require_tree
+
 
 
 // re: ActiveAdmin:

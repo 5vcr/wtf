@@ -1,4 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
+if (document.getElementById("map")) {
 var currentKey = 'education';
 var countryName = 'country';
 
@@ -324,4 +325,5 @@ function getValueOfCountry(d) {
 function getIdOfFeature(f) {
   return countryCodes[f.properties.name];
 
+}
 }
