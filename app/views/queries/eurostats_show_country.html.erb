@@ -1,5 +1,48 @@
 <h1><%= @country_data.first.country %> Total Spending by %GDP</h1>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <div id="tree_graph"></div>
+    </div>
+    <div class="col-xs-4">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="card text-center">
+            <div class="card-block">
+              <h3>About this graph</h3>
+              <p class="card-text">Bacon ipsum dolor amet flank filet mignon short ribs hamburger tail pork chop. Flank ham hock beef ribs, pork chop tongue venison short ribs bacon doner. Boudin pork bresaola landjaeger, shankle ham hock turkey pork loin doner. Chuck beef frankfurter, pork belly salami cupim spare ribs bresaola t-bone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Recommended graphs</h3>
+        </div>
+        <div class="col-xs-6">
+          <div class="card">
+            <%= link_to root_path do %>
+              <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
+          <% end %>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="card">
+            <%= link_to root_path do %>
+              <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Go to your profile', dashboard_path %></p>
+<p><%= link_to 'Home', root_path %></p>
+
 <pre>
   <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
 </pre>
@@ -10,47 +53,4 @@
   </pre>
 
 <% end %>
-
-<div class="container">
-	<div class="row">
-		<div class="col-xs-8">
-			<!-- <div id="chartContainer"></div> -->
-		</div>
-		<div class="col-xs-4">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="card text-center">
-						<div class="card-block">
-							<h3>About this graph</h3>
-							<p class="card-text">Bacon ipsum dolor amet flank filet mignon short ribs hamburger tail pork chop. Flank ham hock beef ribs, pork chop tongue venison short ribs bacon doner. Boudin pork bresaola landjaeger, shankle ham hock turkey pork loin doner. Chuck beef frankfurter, pork belly salami cupim spare ribs bresaola t-bone.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<h3>Recommended graphs</h3>
-				</div>
-				<div class="col-xs-6">
-					<div class="card">
-						<%= link_to root_path do %>
-              <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
-          <% end %>
-					</div>
-				</div>
-				<div class="col-xs-6">
-					<div class="card">
-						<%= link_to root_path do %>
-              <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
-          <% end %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Go to your profile', dashboard_path %></p>
-<p><%= link_to 'Home', root_path %></p>
 
