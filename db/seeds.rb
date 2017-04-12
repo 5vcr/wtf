@@ -27,6 +27,7 @@ csv.each do |row|
     year: row.to_hash['YEAR'],
     value: row.to_hash['VALUE'].to_f,
     unit: row.to_hash['UNIT'],
+    parent: row.to_hash['PARENT']
   })
 
   puts statistic.category

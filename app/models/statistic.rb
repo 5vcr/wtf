@@ -23,8 +23,17 @@ class Statistic < ApplicationRecord
     @category_hash
   end
 
-
   def self.structure_country_data
+  end
+
+
+  def generate_country_context
+  end
+
+  def generate_category_context
+  end
+
+  def generate_compare_context
   end
 
 # controller should know what data, but not how you actually generate or create the data
@@ -32,12 +41,3 @@ class Statistic < ApplicationRecord
 # call this method inside respective controller method
 
 end
-
-
-# self.method = Class.method
-
-# def method
-#   self.something_cool
-# end
-
-# @objet.method
