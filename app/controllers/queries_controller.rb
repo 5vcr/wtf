@@ -41,10 +41,9 @@ class QueriesController < ApplicationController
 
   def eurostats_show_country
     @query = Query.find(params[:id])
-
     first_country = @query.countries.split(",").first
     @country_data = Statistic.where(country: first_country, year: "2015")
-
+    # @country_data = @country_data.to_json(:except => [ :year, :id, :created_at, :updated_at, :unit])
     render "eurostats_show_country"
   end
 
@@ -55,7 +54,6 @@ class QueriesController < ApplicationController
     first_category = @query.categories.split(",").first
     @category_data = Statistic.where(category: first_category, year: "2015")
     @category_data = Statistic.structure_category_data(@category_data)
-
     render "eurostats_show_category"
   end
 

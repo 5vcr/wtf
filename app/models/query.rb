@@ -6,6 +6,6 @@ class Query < ApplicationRecord
   end
 
   def categories_display
-    self.categories.split(",").map { |category| category.capitalize }
+    ["General public services", "Defence", "Public order and safety", "Economic affairs"].map { |category| category.capitalize }
   end
 end
