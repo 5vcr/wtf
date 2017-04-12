@@ -43,9 +43,11 @@ class QueriesController < ApplicationController
     @query = Query.find(params[:id])
     first_country = @query.countries.split(",").first
     @country_data = Statistic.where(country: first_country, year: "2015")
-    # @country_data = @country_data.to_json(:except => [ :year, :id, :created_at, :updated_at, :unit])
+    @country_data = @country_data.to_json(:except => [ :year, :id, :created_at, :updated_at, :unit])
     render "eurostats_show_country"
   end
+
+
 
   def eurostats_show_category
     # put category context generator logic here

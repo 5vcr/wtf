@@ -1,4 +1,4 @@
-<h1><%= @country_data.first.country %> Total Spending by %GDP</h1>
+<h1><%= @query.countries %> Total Spending by %GDP</h1>
 
 <div class="container">
   <div class="row">
@@ -45,14 +45,10 @@
 <p><%= link_to 'Go to your profile', dashboard_path %></p>
 <p><%= link_to 'Home', root_path %></p>
 
-<pre>
-  <%= @query.to_json(:except => [ :created_at, :updated_at ]) %>
-</pre>
+<script>
+  var treeData = <%= raw @country_data %>;
+  console.log(treeData)
+</script>
 
-<% @country_data.each do |statistic| %>
-  <pre>
-    <%= statistic.to_json(:except => [ :created_at, :updated_at ]) %>
-  </pre>
-
-<% end %>
+<%= @country_data %>
 
