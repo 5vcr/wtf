@@ -4,6 +4,10 @@
   <%= image_tag 'logo.png' %>
   <% end %>
 
+  <%= link_to root_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+    <span id="site-title">What The Finance</span>
+  <% end %>  
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -38,10 +42,8 @@
 
     <% else %>
 
-    <%= link_to root_path do %>
-      About
-    <% end %>
   </li>
+  <%= link_to t(".about", default: "About"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
   <!-- Login text link -->
   <%= link_to t(".sign_in", default: "Sign in"), account_facebook_omniauth_authorize_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
