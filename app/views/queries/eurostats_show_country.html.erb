@@ -11,7 +11,7 @@
           <div class="card text-center">
             <div class="card-block">
               <h3>About this graph</h3>
-              <p class="card-text">Bacon ipsum dolor amet flank filet mignon short ribs hamburger tail pork chop. Flank ham hock beef ribs, pork chop tongue venison short ribs bacon doner. Boudin pork bresaola landjaeger, shankle ham hock turkey pork loin doner. Chuck beef frankfurter, pork belly salami cupim spare ribs bresaola t-bone.</p>
+              <p class="card-text"> This is where context will go.</p>
             </div>
           </div>
         </div>
@@ -21,6 +21,7 @@
           <h3>Recommended graphs</h3>
         </div>
         <div class="col-xs-6">
+              <h5>More <%= @query.countries %> </h5>
           <div class="card">
             <%= link_to root_path do %>
               <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
@@ -28,6 +29,7 @@
           </div>
         </div>
         <div class="col-xs-6">
+            <h5>More <%= @query.categories %> </h5>
           <div class="card">
             <%= link_to root_path do %>
               <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
