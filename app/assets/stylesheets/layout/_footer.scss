@@ -22,3 +22,13 @@
 .footer a {
   padding: 10px;
 }
+
+<div class="footer"
+    border-top: 1px solid rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.3);
+    height: 101px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    justify-content: center;
+</div>

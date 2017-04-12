@@ -1,34 +1,49 @@
 <!-- routes to bubble matrix, user chooses one or two countries, and one or two categories
-to compare -->
+	to compare -->
 
-<div class="container">
+	<div class="container">
 
-<h1>Make Your Selections</h1>
+		<h1>Make Your Selections</h1>
 
-<p>Choose a single country or category to explore, or choose up to two of each to compare.
-Choose one or two countries to compare.</p>
+		<p>Choose a single country or category to explore, or choose up to two of each to compare.
+			Choose one or two countries to compare.</p>
 
 <!-- routing to category  always, not to compare, fix it. Not capturing all of the data now - only
-passsing one value from drop downs. -->
+	passsing one value from drop downs. -->
 
-<%= simple_form_for @query do |f| %>
+	<%= simple_form_for @query do |f| %>
+	<div class="container">
+		<div class="row">
+		<div class="cat-compare-box"></div>
+		<h3>
+			Choose categories
+		</h3>
+			<%= render partial: "shared/category_checkbox" %>
+	</div>
 
-  <%= f.input :countries, collection: Statistic.countries, as: :check_boxes %>
+	<div class="container">
+		<div class="row">
+		<h3>
+			Choose countries
+		</h3>
+			<% @countries.each do |country| %>
+			<div class="col-10 col-xs-3 text-center" id="country-select">
+				<%= render partial: "shared/country_checkbox", locals: { country: country } %>
+			</div>
+			<% end %>
+		</div>
+	</div>
 
-  <%= f.input :categories, collection: [ "Defence", "Economic Affairs", "Education", "Environment Protection", "General Public Services", "Health", "Housing & Community Amenities", "Public Order & Safety", "Recreation, Culture & Religion", "Social Protection"], as: :check_boxes %>
+<h3>
+	Summary category
+</h3>
+	<ul id="summary-category"></ul>
+	<h3>
+		Summary country
+	</h3>
+	<ul id="summary-country"></ul>
 
-  <%= f.button :submit, "Compare" %>
-<% end %>
-
-
-	<%= render 'shared/new_compare_form' %>
-
-<div class="row">
-	<%= render 'shared/new_country_form' %>
-</div>
-
-
-<p><%= link_to 'Back', :back %></p>
-<p><%= link_to 'Home', root_path %></p>
+	<%= f.button :submit, "Compare", class: "btn btn-primary long-btn" %>
+	<% end %>
 
 </div>

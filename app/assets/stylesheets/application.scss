@@ -126,6 +126,10 @@ input[type=image]:hover {
   opacity: 0.8;
 }
 
+// .greyed {
+//   color: grey !important;
+// }
+
 .fa-shield {
   color: #263e5c;
 }
@@ -170,6 +174,10 @@ input[type=image]:hover {
   opacity: 0.8;
 }
 
+.long-btn {
+  width: 100%;
+}
+
 #chartContainer {
   background-color: white;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -197,7 +205,7 @@ input[type=image]:hover {
 }
 
 .fa {
-  padding: 12px;
+  padding: 8px;
 }
 
 .teeny-font {

@@ -14,3 +14,23 @@
 // re: ActiveAdmin:
 // In your application.js, require_tree will also ActiveAdmin JS for your entire website.
 // Switch to using specifics require for each file.
+
+$('#category-select .checkbox label').on('click', function(){
+	console.log('hello')
+	$('#summary-category').text("");
+	$('#category-select .checkbox label').each(function(i, item) {
+		if ($('input', item).is(":checked")) {
+			$('#summary-category').append('<li>' + $(this).text() + '</li>')
+		}
+	});
+})
+
+$('#country-select .checkbox label').on('click', function(){
+	console.log('hello')
+	$('#summary-country').text("");
+	$('#country-select .checkbox label').each(function(i, item) {
+		if ($('input', item).is(":checked")) {
+			$('#summary-country').append('<li>' + $(this).text() + '</li>')
+		}
+	});
+})

@@ -20,12 +20,17 @@
 }
 
 /* Navbar logo */
+.navbar-wagon-brand {
+  flex: 0 0 20%;
+}
+
 .navbar-wagon-brand img {
   width: 50px;
 }
 
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
+  flex: 0 0 20%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,5 +140,4 @@
   font-family: 'Poiret One', cursive;
   color: #cc3300;
   font-weight: 400;
-  margin-left: 250px;
 }
