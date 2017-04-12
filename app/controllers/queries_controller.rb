@@ -71,7 +71,7 @@ class QueriesController < ApplicationController
     @compare_data = Statistic.where('year = ? AND category ilike any ( array[?] )', '2015', categories)
     @compare_data = @compare_data.where('country ilike any ( array[?] )', countries)
     @compare_data = @compare_data.select { |data| data.category_code.size <= 4 }
-    @compare_data = @compare_data.to_json(:except => [ :year, :id, :created_at, :updated_at])
+    @compare_data = @compare_data.to_json(:except => [ :year, :id, :created_at, :updated_at, :parent])
     render "eurostats_show_compare"
   end
 
