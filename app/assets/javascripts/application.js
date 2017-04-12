@@ -9,9 +9,7 @@
 //= require topojson
 //= require map
 //= require hexagons
-
-
-
+//= require tree_graph
 
 // re: ActiveAdmin:
 // In your application.js, require_tree will also ActiveAdmin JS for your entire website.
