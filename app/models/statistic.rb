@@ -7,8 +7,24 @@ class Statistic < ApplicationRecord
     (more + all).flatten
   end
 
-  def self.structure_compare_data
-    @compare_data.to_a
+  # def self.structure_compare_data
+  #   @compare_data.to_a
+  # end
+
+  def self.structure_category_data(array)
+    @category_hash = array.map do |statistic|
+      { statistic.country => {
+        country: statistic.country,
+        category: statistic.value,
+        country_code: statistic.country_code
+        }
+      }
+    end
+    @category_hash
+  end
+
+
+  def self.structure_country_data
   end
 
 # controller should know what data, but not how you actually generate or create the data
@@ -16,3 +32,12 @@ class Statistic < ApplicationRecord
 # call this method inside respective controller method
 
 end
+
+
+# self.method = Class.method
+
+# def method
+#   self.something_cool
+# end
+
+# @objet.method
