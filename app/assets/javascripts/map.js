@@ -217,7 +217,7 @@ d3.json('/test.json', function(error, features) {
 
     // We store the data object in the variable which is accessible from
     // outside of this function.
-    mapData = data;
+    mapData = @category_data;
 
     dataByCountry = d3.nest()
       .key(function(d) { return d.country; })

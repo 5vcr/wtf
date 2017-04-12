@@ -43,7 +43,6 @@ class QueriesController < ApplicationController
     @query = Query.find(params[:id])
 
     first_country = @query.countries.split(",").first
-
     @country_data = Statistic.where(country: first_country, year: "2015")
 
     render "eurostats_show_country"
@@ -54,9 +53,8 @@ class QueriesController < ApplicationController
     @query = Query.find(params[:id])
 
     first_category = @query.categories.split(",").first
-    # first_category = @query.categories.split(",").first.capitalize
-
     @category_data = Statistic.where(category: first_category, year: "2015")
+    @category_data = Statistic.structure_category_data(@category_data)
 
     render "eurostats_show_category"
   end
