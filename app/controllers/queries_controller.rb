@@ -85,6 +85,7 @@ class QueriesController < ApplicationController
 
   def new_compare
     @query = Query.new
+    @countries = Statistic.countries
   end
 
   private

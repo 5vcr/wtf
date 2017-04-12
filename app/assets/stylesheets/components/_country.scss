@@ -1,0 +1,94 @@
+.check_boxes {
+	display: none;
+	&:checked ~ p {
+		color: black;
+		img {
+			filter: none;
+		}
+	}
+}
+
+.check_boxes ~ p {
+	font-size: 13px;
+	color: gray;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	transition: color 300ms ease;
+	img {
+		filter: contrast(30%);
+		transition: filter 300ms ease;
+	}
+}
+
+.checkbox .fa-3x {
+	color: gray;
+}
+
+.check_boxes {
+	&:checked ~ p .fa-shield {
+  color: #263e5c;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-money {
+	  color: #3d6099;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-graduation-cap {
+  color: #4895b5;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-pagelines {
+  color: #54b4d3;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-university {
+  color: #00e7ff;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p	.fa-heartbeat {
+	  color: #3ef8ca;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-home {
+  color: #ff7540;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-balance-scale {
+  color: #f45b3d;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-music {
+  color: #cc2c14;
+	}
+}
+
+.check_boxes {
+	&:checked ~ p .fa-universal-access {
+  color: #ae1511;
+	}
+}
+
+
+
+
+
+

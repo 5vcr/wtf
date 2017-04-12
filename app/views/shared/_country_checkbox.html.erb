@@ -1,0 +1,9 @@
+<span class="checkbox">
+	<label for="query_countries_<%= country.downcase %>">
+		<input class="check_boxes optional" type="checkbox" value="<%= country.downcase %>" name="query[countries][]" id="query_countries_<%= country.downcase %>">
+		<p>
+			<%= image_tag("flags/#{country.downcase.parameterize}.png") %>
+			<%= country.titleize %>
+		</p>
+	</label>
+</span>
