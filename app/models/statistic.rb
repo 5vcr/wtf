@@ -5,10 +5,6 @@ class Statistic < ApplicationRecord
     (more + all).flatten
   end
 
-  # def self.structure_compare_data
-  #   @compare_data.to_a
-  # end
-
   def self.structure_category_data(array)
     @category_hash = array.map do |statistic|
       {
@@ -21,6 +17,14 @@ class Statistic < ApplicationRecord
   end
 
   def self.structure_country_data
+    @country_hash = array.map do |statistic|
+      {
+        country: statistic.country,
+        category: statistic.value,
+        country_code: statistic.country_code
+      }
+    end
+    @country_hash.to_json
   end
 # controller should know what data, but not how you actually generate or create the data
 # build one method for data structure for each graph
