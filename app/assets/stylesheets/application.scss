@@ -96,6 +96,7 @@ g.features {
 }
 g.features path:hover {
   opacity: 0.5;
+transform: rotate(900deg);;
 }
 
 @media screen and (min-width: 992px) {
@@ -292,4 +293,12 @@ text.dimple-custom-axis-label {
 
 .featured-graphs {
   margin: 50px 0 0 0;
+}
+
+.graph-title {
+  padding: 20px 0 20px 0;
+}
+
+#legend {
+  border: none;
 }
