@@ -5,28 +5,59 @@ class Statistic < ApplicationRecord
     (more + all).flatten
   end
 
+  def self.structure_country_data(array)
+    root_statistics = array.where(parent: "")
+
+    {
+      YEAR: array.first.country,
+      children: root_statistics.map do |statistic|
+        {
+          CATEGORY_CODE: statistic.category_code,
+          CATEGORY: statistic.category,
+          VALUE: statistic.value,
+          children: statistic.children.map do |statistic_child|
+            {
+              CATEGORY_CODE: statistic_child.category_code,
+              CATEGORY: statistic_child.category,
+              VALUE: statistic_child.value,
+            }
+          end
+        }
+      end
+    }.to_json
+  end
+
   def self.structure_category_data(array)
-    @category_hash = array.map do |statistic|
+    array.map do |statistic|
       {
         country: statistic.country,
         category: statistic.value,
         country_code: statistic.country_code
       }
-    end
-    @category_hash.to_json
+    end.to_json
   end
 
-  def self.structure_country_data
-    # @country_hash = array.map do |statistic|
-    #   {
-    #     country: statistic.country,
-    #     category: statistic.value,
-    #     country_code: statistic.country_code
-    #   }
-    # end
-    @country_hash.to_json
+  def children
+    Statistic.where(parent: self.category_code)
   end
 # controller should know what data, but not how you actually generate or create the data
 # build one method for data structure for each graph
 # call this method inside respective controller method
 end
+
+
+
+# var treeData =
+#  {
+#    “name”: “Top Level”,
+#    “children”: [
+#      {
+#        “name”: “Level 2: A”,
+#        “children”: [
+#          { “name”: “Son of A” },
+#          { “name”: “Daughter of A” }
+#        ]
+#      },
+#      { “name”: “Level 2: B” }
+#    ]
+#  };
