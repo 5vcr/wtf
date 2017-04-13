@@ -16,7 +16,6 @@
 // Switch to using specifics require for each file.
 
 $('#category-select .checkbox label').on('click', function(){
-	console.log('hello')
 	$('#summary-category').text("");
 	$('#category-select .checkbox label').each(function(i, item) {
 		if ($('input', item).is(":checked")) {
@@ -26,7 +25,6 @@ $('#category-select .checkbox label').on('click', function(){
 })
 
 $('#country-select .checkbox label').on('click', function(){
-	console.log('hello')
 	$('#summary-country').text("");
 	$('#country-select .checkbox label').each(function(i, item) {
 		if ($('input', item).is(":checked")) {
@@ -36,6 +34,8 @@ $('#country-select .checkbox label').on('click', function(){
 })
 
 $(document).ready(function(){
+	$('.dimple-bubble').css('opacity', 1);
+ })
   $('#map').css('opacity', 1);
   $('#map').css('filter', 'none');
 })

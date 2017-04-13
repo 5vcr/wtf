@@ -62,7 +62,9 @@
 }
 
 .title-container {
-  height: 200px;
+  left: -80px;
+  top: -10px;
+  height: 100px;
   position: absolute;
   width: 100%;
   display: flex;
@@ -212,4 +214,16 @@ p {
 
 .intro-msg {
   margin: 50px 80px 50px 80px;
+}
+
+.odd-text {
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  max-width: 120px;
+}
+
+.dimple-bubble {
+  opacity: 0;
+  transition: opacity 4s ease;
 }
