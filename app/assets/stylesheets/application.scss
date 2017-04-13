@@ -15,7 +15,7 @@
 @import "components/index";
 @import "pages/index";
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, ul {
 	font-family: 'Quicksand', sans-serif;
 	color: #616161;
 }
@@ -177,6 +177,7 @@ input[type=image]:hover {
 
 .long-btn {
   width: 100%;
+  margin: 30px 0;
 }
 
 #chartContainer {
@@ -219,8 +220,8 @@ h5 {
 
 // Start tree graph styling
 .node circle {
-  fill: #fff;
-  stroke: steelblue;
+  fill: #ff7540;
+  stroke: #f45b3d;
   stroke-width: 3px;
 }
 
@@ -301,4 +302,12 @@ text.dimple-custom-axis-label {
 
 #legend {
   border: none;
+}
+
+.content {
+  padding: 15px;
+}
+
+.selected-title {
+  text-align: center;
 }
