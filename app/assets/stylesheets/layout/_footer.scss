@@ -1,29 +1,5 @@
 // Your footer style
 .footer{
-  background-color: #263238;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  }
-
-.footer p,
-.footer h3, h5 {
-  color: #fafafa;
-  margin:0;
-}
-
-.footer i {
-  font-size: 15px;
-  color: #fafafa;
-}
-
-.footer a {
-  padding: 10px;
-}
-
-<div class="footer"
     border-top: 1px solid rgba(0,0,0,0.3);
     color: rgba(0,0,0,0.3);
     height: 101px;
@@ -31,4 +7,26 @@
     flex-direction: column;
     margin-top: 100px;
     justify-content: center;
-</div>
+  // background-color: #263238;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
+  // position: relative;
+  // bottom: 0;
+  // width: 100%;
+  }
+
+.footer p,
+.footer h3, h5 {
+  color: gray;
+  margin:0;
+}
+
+.footer i {
+  font-size: 15px;
+  color: gray;
+}
+
+.footer a {
+  padding: 10px;
+}
+
