@@ -11,7 +11,7 @@
 
     </div>
   </div>
-  <h3 class="graph-title"> <%= @query.categories.titleize %> by %GDP, 2015 </h3>
+  <h3 class="graph-title"> <%= @query.categories.titleize %>, 2015 (%GDP) </h3>
   <div class="row">
     <div class="col-xs-8">
      <div id="map"></div>
@@ -24,7 +24,7 @@
         <div class="card-block">
          <h3>About this graph</h3>
          <p></p>
-          <p><strong>Gross Domestic Product (GDP)</strong> is a monetary measure of the market value of all final goods and services produced in a period (quarterly or yearly).</p>
+          <p><strong>Gross Domestic Product (GDP)</strong> is a monetary measure of the market value of all final goods and services produced in a period (yearly).</p>
          <p class="card-text">source: <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Government_expenditure_by_function_%E2%80%93_COFOG">ec.europa.eu</a></p>
        </div>
      </div>
@@ -48,8 +48,8 @@
             <%= link_to root_path do %>
               <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
           <% end %>
-        <h5>More </h5>
-        <h5><%= @query.countries.titleize.split(",").sample %></h5>
+        <h5>Compare <%= @query.categories.titleize.split(",").sample %> </h5>
+        <h5> to other spending </h5>
           </div>
         </div>
       </div>

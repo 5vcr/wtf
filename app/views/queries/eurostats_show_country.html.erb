@@ -13,7 +13,7 @@
     </div>
   </div>
 
-<h3 class="graph-title"> <%= @query.countries %> Total Spending by %GDP</h3>
+<h3 class="graph-title"> <%= @query.countries %> Government Spending, 2015 (%GDP) </h3>
   <div class="row">
     <div class="col-xs-8">
       <div id="tree_graph"></div>
@@ -25,8 +25,8 @@
             <div class="card-block">
               <h3>About this graph</h3>
               <p>Government spending or expenditure includes all government consumption, investment, and transfer payments (welfare payments made available through the social security system).</p>
-              <p><strong>Gross Domestic Product (GDP)</strong> is a monetary measure of the market value of all final goods and services produced in a period (quarterly or yearly).</p>
-              <p class="card-text"> source: <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Government_expenditure_by_function_%E2%80%93_COFOG">ec.europa.eu</p>
+              <p><strong>Gross Domestic Product (GDP)</strong> is a measure of the size of a nation's economy. This constitutes the market value of all final goods and services produced in a period (yearly).</p>
+              <p class="card-text"> Source: <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Government_expenditure_by_function_%E2%80%93_COFOG">ec.europa.eu</p>
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@
             <%= link_to root_path do %>
               <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
           <% end %>
-         <h5>More</h5>
-         <h5><%= @query.categories.titleize.split(",").sample %> </h5>
+         <h5>Compare <%= @query.countries.titleize.split(",").sample %></h5>
+         <h5> with other countries </h5>
           </div>
         </div>
         <div class="col-xs-6">
