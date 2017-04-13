@@ -38,7 +38,7 @@
         <div class="col-xs-6">
           <div class="card">
             <%= link_to root_path do %>
-              <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
+              <%= image_tag 'bubble1.png', height: 150, width: 150, crop: :fill %>
           <% end %>
          <h5>Compare <%= @query.countries.titleize.split(",").sample %></h5>
          <h5> with other countries </h5>
@@ -47,7 +47,7 @@
         <div class="col-xs-6">
           <div class="card">
             <%= link_to root_path do %>
-              <%= image_tag 'streamgraph.png', height: 150, width: 150, crop: :fill %>
+              <%= image_tag 'map1.png', height: 150, width: 150, crop: :fill %>
           <% end %>
         <h5>More </h5>
         <h5><%= @query.countries.titleize.split(",").sample %></h5>
@@ -60,5 +60,13 @@
 
 <script>
   NEW_DATA = <%= raw @country_data %>;
-  console.log(NEW_DATA);
+  function diagonal(s, d) {
+
+    path = `M ${s.y} ${s.x}
+            C ${(s.y + d.y) / 2} ${s.x},
+              ${(s.y + d.y) / 2} ${d.x},
+              ${d.y} ${d.x }`
+
+    return path
+  }
   </script>
