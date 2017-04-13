@@ -9,7 +9,8 @@ class Statistic < ApplicationRecord
     root_statistics = array.where(parent: "")
 
     {
-      YEAR: array.first.country,
+      VALUE: 50, #arbitrary value, write method to calculate actual value
+      COUNTRY: array.first.country,
       children: root_statistics.map do |statistic|
         {
           CATEGORY_CODE: statistic.category_code,
@@ -19,8 +20,9 @@ class Statistic < ApplicationRecord
             {
               CATEGORY_CODE: statistic_child.category_code,
               CATEGORY: statistic_child.category,
-              VALUE: statistic_child.value,
+              VALUE: statistic_child.value
             }
+            break
           end
         }
       end
