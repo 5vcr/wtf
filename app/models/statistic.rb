@@ -42,7 +42,7 @@ class Statistic < ApplicationRecord
   end
 
   def children
-    Statistic.where(parent: self.category_code, country: self.country)
+    Statistic.select('DISTINCT ON (category_code) *').where(parent: self.category_code, country: self.country)
   end
 # controller should know what data, but not how you actually generate or create the data
 # build one method for data structure for each graph
