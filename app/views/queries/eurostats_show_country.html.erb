@@ -1,6 +1,19 @@
-<h1><%= @query.countries %> Total Spending by %GDP</h1>
 
 <div class="container">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Country', :back %></li>
+        <li class="active"> <%= @query.countries.titleize %> </li>
+      </ul>
+
+    </div>
+  </div>
+
+<h1><%= @query.countries %> Total Spending by %GDP</h1>
   <div class="row">
     <div class="col-xs-8">
       <div id="tree_graph"></div>
@@ -11,7 +24,9 @@
           <div class="card text-center">
             <div class="card-block">
               <h3>About this graph</h3>
-              <p class="card-text"> This is where context will go.</p>
+              <p>Government spending or expenditure includes all government consumption, investment, and transfer payments (welfare payments made available through the social security system).</p>
+              <p><strong>Gross Domestic Product (GDP)</strong> is a monetary measure of the market value of all final goods and services produced in a period (quarterly or yearly).</p>
+              <p class="card-text"> source: <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Government_expenditure_by_function_%E2%80%93_COFOG">ec.europa.eu</p>
             </div>
           </div>
         </div>

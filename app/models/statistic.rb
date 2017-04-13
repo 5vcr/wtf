@@ -17,13 +17,13 @@ class Statistic < ApplicationRecord
   end
 
   def self.structure_country_data
-    @country_hash = array.map do |statistic|
-      {
-        country: statistic.country,
-        category: statistic.value,
-        country_code: statistic.country_code
-      }
-    end
+    # @country_hash = array.map do |statistic|
+    #   {
+    #     country: statistic.country,
+    #     category: statistic.value,
+    #     country_code: statistic.country_code
+    #   }
+    # end
     @country_hash.to_json
   end
 # controller should know what data, but not how you actually generate or create the data

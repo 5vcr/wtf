@@ -34,3 +34,8 @@ $('#country-select .checkbox label').on('click', function(){
 		}
 	});
 })
+
+$(document).ready(function(){
+  $('#map').css('opacity', 1);
+  $('#map').css('filter', 'none');
+})
