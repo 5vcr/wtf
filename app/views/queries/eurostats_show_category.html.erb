@@ -23,7 +23,9 @@
        <div class="card text-center">
         <div class="card-block">
          <h3>About this graph</h3>
-         <p class="card-text">Bacon ipsum dolor amet flank filet mignon short ribs hamburger tail pork chop. Flank ham hock beef ribs, pork chop tongue venison short ribs bacon doner. Boudin pork bresaola landjaeger, shankle ham hock turkey pork loin doner. Chuck beef frankfurter, pork belly salami cupim spare ribs bresaola t-bone.</p>
+         <p></p>
+          <p><strong>Gross Domestic Product (GDP)</strong> is a monetary measure of the market value of all final goods and services produced in a period (quarterly or yearly).</p>
+         <p class="card-text">source: <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Government_expenditure_by_function_%E2%80%93_COFOG">ec.europa.eu</a></p>
        </div>
      </div>
    </div>
@@ -33,6 +35,7 @@
    <h3>Recommended graphs</h3>
  </div>
  <div class="col-xs-6">
+ More <%= @query.categories %>
    <div class="card">
     <%= link_to root_path do %>
     <%= image_tag 'sunburst.png', height: 150, width: 150, crop: :fill %>
