@@ -6,7 +6,7 @@ class Statistic < ApplicationRecord
   end
 
   def self.structure_country_data(array)
-    root_statistics = array.where(parent: "")
+    root_statistics = array.where(parent: ["", nil])
 
    teletubbies =  {
       VALUE: 50, #arbitrary value, write method to calculate actual value
