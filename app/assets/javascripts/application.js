@@ -35,4 +35,7 @@ $('#country-select .checkbox label').on('click', function(){
 
 $(document).ready(function(){
 	$('.dimple-bubble').css('opacity', 1);
+ })
+  $('#map').css('opacity', 1);
+  $('#map').css('filter', 'none');
 })
