@@ -8,23 +8,27 @@ class Statistic < ApplicationRecord
   def self.structure_country_data(array)
     root_statistics = array.where(parent: "")
 
-    {
-      YEAR: array.first.country,
+   teletubbies =  {
+      VALUE: 50, #arbitrary value, write method to calculate actual value
+      COUNTRY: array.first.country,
       children: root_statistics.map do |statistic|
         {
           CATEGORY_CODE: statistic.category_code,
           CATEGORY: statistic.category,
           VALUE: statistic.value,
           children: statistic.children.map do |statistic_child|
+            # raise
+            # raise
             {
               CATEGORY_CODE: statistic_child.category_code,
               CATEGORY: statistic_child.category,
-              VALUE: statistic_child.value,
+              VALUE: statistic_child.value
             }
           end
         }
       end
-    }.to_json
+    }
+    teletubbies.to_json
   end
 
   def self.structure_category_data(array)
@@ -38,7 +42,7 @@ class Statistic < ApplicationRecord
   end
 
   def children
-    Statistic.where(parent: self.category_code)
+    Statistic.where(parent: self.category_code, country: self.country)
   end
 # controller should know what data, but not how you actually generate or create the data
 # build one method for data structure for each graph
