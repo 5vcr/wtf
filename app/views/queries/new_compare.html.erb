@@ -3,47 +3,45 @@
 
 	<div class="container">
 
-		<h1>Make Your Selections</h1>
+		<h1>Choose Multiple Countries and Categories</h1>
 
-		<p>Choose a single country or category to explore, or choose up to two of each to compare.
-			Choose one or two countries to compare.</p>
-
-<!-- routing to category  always, not to compare, fix it. Not capturing all of the data now - only
-	passsing one value from drop downs. -->
+		<p>Choose a selection of different countries and categories to explore and compare spending across the EU.</p>
 
 	<%= simple_form_for @query do |f| %>
 	<div class="container">
 		<div class="row">
-		<div class="cat-compare-box"></div>
-		<h3>
-			Choose categories
-		</h3>
+			<h3>Categories</h3>
 			<%= render partial: "shared/category_checkbox" %>
-	</div>
-
-	<div class="container">
-		<div class="row">
-		<h3>
-			Choose countries
-		</h3>
-			<% @countries.each do |country| %>
-			<div class="col-10 col-xs-3 text-center" id="country-select">
-				<%= render partial: "shared/country_checkbox", locals: { country: country } %>
-			</div>
-			<% end %>
 		</div>
+
+			<div class="row">
+				<h3>Countries</h3>
+				<% @countries.each do |country| %>
+				<div class="col-10 col-xs-3 text-center" id="country-select">
+					<%= render partial: "shared/country_checkbox", locals: { country: country } %>
+				</div>
+				<% end %>
+			</div>
+		
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="card">
+					<div class="content">
+						<h3 class="selected-title">Selected categories</h3>
+						<ul id="summary-category"></ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="card">
+					<div class="content">
+						<h3 class="selected-title">Selected countries</h3>
+						<ul id="summary-country"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%= f.button :submit, "Compare", class: "btn btn-primary long-btn" %>
+		<% end %>
+
 	</div>
-
-<h3>
-	Selected categories
-</h3>
-	<ul id="summary-category"></ul>
-	<h3>
-		Selected countries
-	</h3>
-	<ul id="summary-country"></ul>
-
-	<%= f.button :submit, "Compare", class: "btn btn-primary long-btn" %>
-	<% end %>
-
-</div>
