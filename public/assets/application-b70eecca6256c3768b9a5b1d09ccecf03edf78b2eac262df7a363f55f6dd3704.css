@@ -27366,9 +27366,10 @@ p {
   display: block;
   margin: 10px auto;
   max-width: 120px;
+  height: 75px;
 }
 
-/* line 226, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/pages/_home.scss */
+/* line 227, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/pages/_home.scss */
 .dimple-bubble {
   opacity: 0;
   -webkit-transition: opacity 4s ease;
@@ -27508,108 +27509,106 @@ g.features {
 /* line 97, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 g.features path:hover {
   opacity: 0.5;
-  -webkit-transform: rotate(900deg);
-          transform: rotate(900deg);
 }
 
 @media screen and (min-width: 992px) {
-  /* line 103, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+  /* line 102, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
   .col-8 {
     width: 12.5%;
     margin: 30px 0 30px 0;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 110, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+  /* line 109, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
   .col-10 {
     width: 10%;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 116, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+  /* line 115, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
   .col-5 {
     width: 20%;
     margin: 30px 0 30px 0;
   }
 }
-/* line 122, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 121, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 input[type=image] {
   padding: 8px 0 8px 0;
 }
 
-/* line 126, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 125, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 input[type=image]:hover {
   opacity: 0.8;
 }
 
-/* line 134, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 133, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-shield {
   color: #263e5c;
 }
 
-/* line 138, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 137, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-money {
   color: #3d6099;
 }
 
-/* line 142, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 141, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-graduation-cap {
   color: #4895b5;
 }
 
-/* line 146, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 145, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-pagelines {
   color: #54b4d3;
 }
 
-/* line 150, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 149, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-university {
   color: #00e7ff;
 }
 
-/* line 154, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 153, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-heartbeat {
   color: #3ef8ca;
 }
 
-/* line 158, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 157, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-home {
   color: #ff7540;
 }
 
-/* line 162, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 161, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-balance-scale {
   color: #f45b3d;
 }
 
-/* line 166, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 165, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-music {
   color: #cc2c14;
 }
 
-/* line 170, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 169, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa-universal-access {
   color: #ae1511;
 }
 
-/* line 174, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 173, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa:hover {
   opacity: 0.8;
 }
 
-/* line 178, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 177, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .long-btn {
   width: 100%;
   margin: 30px 0;
 }
 
-/* line 183, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 182, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 #chartContainer {
   background-color: white;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* line 188, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 187, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .checkbox input[type=checkbox] {
   opacity: 1;
   position: static;
@@ -27618,143 +27617,163 @@ input[type=image]:hover {
   pointer-events: none;
 }
 
-/* line 200, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 199, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .cat-btn {
   border: none;
   background-color: transparent;
 }
 
-/* line 205, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 204, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .cat-form-container {
   margin: 70px 0 70px 0;
 }
 
-/* line 209, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 208, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .fa {
   padding: 8px;
 }
 
-/* line 213, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 212, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .teeny-font {
   font-size: 13px;
 }
 
-/* line 217, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 216, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 h5 {
   font-size: 15px;
 }
 
-/* line 222, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 221, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .node circle {
   fill: #ff7540;
   stroke: #f45b3d;
   stroke-width: 3px;
 }
 
-/* line 228, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 227, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .node text {
   font: 10px sans-serif;
 }
 
-/* line 231, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 230, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .node--internal text {
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
-/* line 235, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 234, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .link {
   fill: none;
   stroke: #ccc;
   stroke-opacity: 0.7;
 }
 
-/* line 242, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 241, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-defence {
   fill: #263e5c !important;
 }
 
-/* line 246, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 245, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-economic-affairs {
   fill: #3d6099 !important;
 }
 
-/* line 250, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 249, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-education {
   fill: #4895b5 !important;
 }
 
-/* line 254, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 253, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-environment-protection {
   fill: #54b4d3 !important;
 }
 
-/* line 258, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 257, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-general-public-services {
   fill: #00e7ff !important;
 }
 
-/* line 262, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 261, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-health {
   fill: #3ef8ca !important;
 }
 
-/* line 266, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 265, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-housing-and-community-amenities {
   fill: #ff7540 !important;
 }
 
-/* line 270, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 269, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-public-order-and-safety {
   fill: #f45b3d !important;
 }
 
-/* line 274, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 273, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-recreation--culture-and-religion {
   fill: #cc2c14 !important;
 }
 
-/* line 278, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 277, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-social-protection {
   fill: #ae1511 !important;
 }
 
-/* line 282, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 281, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 circle {
   stroke: #e0e0e0 !important;
   stroke-width: 1px !important;
 }
 
-/* line 287, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 286, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .dimple-custom-axis-line {
   stroke: #e0e0e0 !important;
 }
 
-/* line 291, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 290, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 text.dimple-custom-axis-label {
   fill: grey !important;
 }
 
-/* line 295, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 294, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .featured-graphs {
   margin: 50px 0 0 0;
 }
 
-/* line 299, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 298, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .graph-title {
   padding: 20px 0 20px 0;
+  color: #616161;
+  font-size: 13px;
 }
 
-/* line 303, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 304, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 #legend {
   border: none;
 }
 
-/* line 307, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 308, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .content {
   padding: 15px;
 }
 
-/* line 311, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+/* line 312, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
 .selected-title {
   text-align: center;
+}
+
+/* line 316, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+.card {
+  box-shadow: none !important;
+  border: solid 1px #e0e0e0 !important;
+}
+
+/* line 321, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+.recommendation-text {
+  padding: 8px;
+}
+
+/* line 325, /Users/kristinbrandenburg/code/wtf/app/assets/stylesheets/application.scss */
+.breadcrumb {
+  background-color: transparent !important;
+  margin-left: 20px;
+  float: left;
 }
