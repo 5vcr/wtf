@@ -6,6 +6,7 @@ var svg = dimple.newSvg("#chartContainer", 700, 630);
     myChart.addCategoryAxis("x", "country");
     myChart.addCategoryAxis("y", "category");
     var z = myChart.addMeasureAxis("z", "value");
+    z.tickFormat = “,.1f”;
     // var s = myChart.addSeries("Euros");
     var c = myChart.addSeries("category", dimple.plot.bubble);
     // s.aggregate = dimple.aggregateMethod.max;
