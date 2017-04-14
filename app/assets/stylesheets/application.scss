@@ -313,3 +313,18 @@ text.dimple-custom-axis-label {
 .selected-title {
   text-align: center;
 }
+
+.card {
+  box-shadow: none !important;
+  border: solid 1px #e0e0e0 !important;
+}
+
+.recommendation-text {
+  padding: 8px;
+}
+
+.breadcrumb {
+  background-color: transparent !important;
+  margin-left: 20px;
+  float: left;
+}

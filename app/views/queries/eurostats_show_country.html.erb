@@ -1,10 +1,7 @@
-
-<div class="container">
-
   <div class="row">
     <div class="col-xs-12">
 
-      <ul class="breadcrumb" style="margin-bottom: 5px;">
+      <ul class="breadcrumb">
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Country', :back %></li>
         <li class="active"> <%= @query.countries.titleize %> </li>
@@ -13,7 +10,10 @@
     </div>
   </div>
 
-<h3 class="graph-title"> <%= @query.countries %> Government Spending, 2015 (%GDP) </h3>
+<div class="container">
+
+
+<h3> <%= @query.countries %> Government Spending, 2015 (%GDP) </h3>
   <div class="row">
     <div class="col-xs-8">
       <div id="tree_graph"></div>
@@ -33,24 +33,22 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <h3>Recommended graphs</h3>
+          <h4>Recommended graphs</h4>
         </div>
         <div class="col-xs-6">
-          <div class="card">
+          <div class="card text-center">
             <%= link_to root_path do %>
-              <%= image_tag 'bubble1.png', height: 150, width: 150, crop: :fill %>
+              <%= image_tag 'bubble1.png', height: 150, width: 163, crop: :fill %>
           <% end %>
-         <h5>Compare <%= @query.countries.titleize.split(",").sample %></h5>
-         <h5> with other countries </h5>
+         <h5 class="recommendation-text">Compare <%= @query.countries.titleize.split(",").sample %> with other countries </h5>
           </div>
         </div>
         <div class="col-xs-6">
-          <div class="card">
+          <div class="card text-center">
             <%= link_to root_path do %>
-              <%= image_tag 'map1.png', height: 150, width: 150, crop: :fill %>
+              <%= image_tag 'map1.png', height: 150, width: 163, crop: :fill %>
           <% end %>
-        <h5>More </h5>
-        <h5><%= @query.countries.titleize.split(",").sample %></h5>
+        <h5 class="recommendation-text">More <br> <%= @query.countries.titleize.split(",").sample %></h5>
           </div>
         </div>
       </div>
